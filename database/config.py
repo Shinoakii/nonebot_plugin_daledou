@@ -1,0 +1,3739 @@
+from .models import Userleveltitleconfig, ActiveSkillConfig, WeaponConfig, PassiveSkill
+from ..version import __version__
+
+# ----等级配置----start
+User_level_title_config_list = []
+User_level_title_config_list.append(Userleveltitleconfig(
+    level=0, title='乐斗小菜', version=__version__))
+User_level_title_config_list.append(Userleveltitleconfig(
+    level=1, title='乐斗新星', version=__version__))
+User_level_title_config_list.append(Userleveltitleconfig(
+    level=2, title='乐斗好手', version=__version__))
+User_level_title_config_list.append(Userleveltitleconfig(
+    level=3, title='乐斗强者', version=__version__))
+User_level_title_config_list.append(Userleveltitleconfig(
+    level=4, title='企鹅大侠', version=__version__))
+User_level_title_config_list.append(Userleveltitleconfig(
+    level=5, title='黄金乐斗士', version=__version__))
+User_level_title_config_list.append(Userleveltitleconfig(
+    level=6, title='传说乐斗士', version=__version__))
+User_level_title_config_list.append(Userleveltitleconfig(
+    level=7, title='神话乐斗士', version=__version__))
+User_level_title_config_list.append(Userleveltitleconfig(
+    level=8, title='求败乐斗士', version=__version__))
+User_level_title_config_list.append(Userleveltitleconfig(
+    level=9, title='斗战神', version=__version__))
+# ----等级配置----end
+
+# ----被动技能配置----start
+Passive_Skill_list = []
+Passive_Skill_list.append(PassiveSkill(
+    id=1,
+    group_id=1,
+    ps_name='强健身躯',
+    ps_lv=0,
+    buff_type='增加生命值',
+    buff_value=10,
+    learn_lv=5,
+    version=__version__
+))
+Passive_Skill_list.append(PassiveSkill(
+    id=2,
+    group_id=1,
+    ps_name='强健身躯',
+    ps_lv=1,
+    buff_type='增加生命值',
+    buff_value=20,
+    learn_lv=5,
+    version=__version__
+))
+Passive_Skill_list.append(PassiveSkill(
+    id=3,
+    group_id=1,
+    ps_name='强健身躯',
+    ps_lv=2,
+    buff_type='增加生命值',
+    buff_value=30,
+    learn_lv=5,
+    version=__version__
+))
+Passive_Skill_list.append(PassiveSkill(
+    id=4,
+    group_id=1,
+    ps_name='强健身躯',
+    ps_lv=3,
+    buff_type='增加生命值',
+    buff_value=40,
+    learn_lv=5,
+    version=__version__
+))
+Passive_Skill_list.append(PassiveSkill(
+    id=5,
+    group_id=1,
+    ps_name='强健身躯',
+    ps_lv=4,
+    buff_type='增加生命值',
+    buff_value=50,
+    learn_lv=5,
+    version=__version__
+))
+Passive_Skill_list.append(PassiveSkill(
+    id=6,
+    group_id=1,
+    ps_name='强健身躯',
+    ps_lv=5,
+    buff_type='增加生命值',
+    buff_value=60,
+    learn_lv=5,
+    version=__version__
+))
+Passive_Skill_list.append(PassiveSkill(
+    id=7,
+    group_id=2,
+    ps_name='天生大力',
+    ps_lv=0,
+    buff_type='增加力量',
+    learn_lv=5,
+    version=__version__
+))
+Passive_Skill_list.append(PassiveSkill(
+    id=8,
+    group_id=3,
+    ps_name='身手敏捷',
+    ps_lv=0,
+    buff_type='增加敏捷',
+    learn_lv=5,
+    version=__version__
+))
+Passive_Skill_list.append(PassiveSkill(
+    id=9,
+    group_id=4,
+    ps_name='快人一步',
+    ps_lv=0,
+    buff_type='增加速度',
+    learn_lv=5,
+    version=__version__
+))
+Passive_Skill_list.append(PassiveSkill(
+    id=10,
+    group_id=5,
+    ps_name='均衡发展',
+    ps_lv=0,
+    buff_type='增加全属性',
+    learn_lv=5,
+    version=__version__
+))
+Passive_Skill_list.append(PassiveSkill(
+    id=11,
+    group_id=6,
+    ps_name='武器好手',
+    ps_lv=0,
+    buff_type='增加全武器伤害',
+    buff_value=4,
+    learn_lv=5,
+    version=__version__
+))
+Passive_Skill_list.append(PassiveSkill(
+    id=12,
+    group_id=6,
+    ps_name='武器好手',
+    ps_lv=1,
+    buff_type='增加全武器伤害',
+    buff_value=8,
+    learn_lv=5,
+    version=__version__
+))
+Passive_Skill_list.append(PassiveSkill(
+    id=13,
+    group_id=6,
+    ps_name='武器好手',
+    ps_lv=2,
+    buff_type='增加全武器伤害',
+    buff_value=12,
+    learn_lv=5,
+    version=__version__
+))
+Passive_Skill_list.append(PassiveSkill(
+    id=14,
+    group_id=6,
+    ps_name='武器好手',
+    ps_lv=3,
+    buff_type='增加全武器伤害',
+    buff_value=16,
+    learn_lv=5,
+    version=__version__
+))
+Passive_Skill_list.append(PassiveSkill(
+    id=15,
+    group_id=6,
+    ps_name='武器好手',
+    ps_lv=4,
+    buff_type='增加全武器伤害',
+    buff_value=20,
+    learn_lv=5,
+    version=__version__
+))
+Passive_Skill_list.append(PassiveSkill(
+    id=16,
+    group_id=6,
+    ps_name='武器好手',
+    ps_lv=5,
+    buff_type='增加全武器伤害',
+    buff_value=24,
+    learn_lv=5,
+    version=__version__
+))
+Passive_Skill_list.append(PassiveSkill(
+    id=17,
+    group_id=7,
+    ps_name='肉搏好手',
+    ps_lv=0,
+    buff_type='增加空手伤害',
+    buff_value=4,
+    learn_lv=5,
+    version=__version__
+))
+Passive_Skill_list.append(PassiveSkill(
+    id=18,
+    group_id=7,
+    ps_name='肉搏好手',
+    ps_lv=1,
+    buff_type='增加空手伤害',
+    buff_value=8,
+    learn_lv=5,
+    version=__version__
+))
+Passive_Skill_list.append(PassiveSkill(
+    id=19,
+    group_id=7,
+    ps_name='肉搏好手',
+    ps_lv=2,
+    buff_type='增加空手伤害',
+    buff_value=12,
+    learn_lv=5,
+    version=__version__
+))
+Passive_Skill_list.append(PassiveSkill(
+    id=20,
+    group_id=7,
+    ps_name='肉搏好手',
+    ps_lv=3,
+    buff_type='增加空手伤害',
+    buff_value=16,
+    learn_lv=5,
+    version=__version__
+))
+Passive_Skill_list.append(PassiveSkill(
+    id=21,
+    group_id=7,
+    ps_name='肉搏好手',
+    ps_lv=4,
+    buff_type='增加空手伤害',
+    buff_value=20,
+    learn_lv=5,
+    version=__version__
+))
+Passive_Skill_list.append(PassiveSkill(
+    id=22,
+    group_id=7,
+    ps_name='肉搏好手',
+    ps_lv=5,
+    buff_type='增加空手伤害',
+    buff_value=24,
+    learn_lv=5,
+    version=__version__
+))
+Passive_Skill_list.append(PassiveSkill(
+    id=23,
+    group_id=8,
+    ps_name='第六感',
+    ps_lv=0,
+    buff_type='被攻击后反击',
+    buff_value=5,
+    learn_lv=5,
+    version=__version__
+))
+Passive_Skill_list.append(PassiveSkill(
+    id=24,
+    group_id=8,
+    ps_name='第六感',
+    ps_lv=1,
+    buff_type='被攻击后反击',
+    buff_value=10,
+    learn_lv=5,
+    version=__version__
+))
+Passive_Skill_list.append(PassiveSkill(
+    id=25,
+    group_id=8,
+    ps_name='第六感',
+    ps_lv=2,
+    buff_type='被攻击后反击',
+    buff_value=15,
+    learn_lv=5,
+    version=__version__
+))
+Passive_Skill_list.append(PassiveSkill(
+    id=26,
+    group_id=8,
+    ps_name='第六感',
+    ps_lv=3,
+    buff_type='被攻击后反击',
+    buff_value=20,
+    learn_lv=5,
+    version=__version__
+))
+Passive_Skill_list.append(PassiveSkill(
+    id=27,
+    group_id=8,
+    ps_name='第六感',
+    ps_lv=4,
+    buff_type='被攻击后反击',
+    buff_value=25,
+    learn_lv=5,
+    version=__version__
+))
+Passive_Skill_list.append(PassiveSkill(
+    id=28,
+    group_id=8,
+    ps_name='第六感',
+    ps_lv=5,
+    buff_type='被攻击后反击',
+    buff_value=30,
+    learn_lv=5,
+    version=__version__
+))
+Passive_Skill_list.append(PassiveSkill(
+    id=29,
+    group_id=9,
+    ps_name='无影手',
+    ps_lv=0,
+    buff_type='忽视对手回合',
+    buff_value=4,
+    learn_lv=5,
+    version=__version__
+))
+Passive_Skill_list.append(PassiveSkill(
+    id=30,
+    group_id=9,
+    ps_name='无影手',
+    ps_lv=1,
+    buff_type='忽视对手回合',
+    buff_value=8,
+    learn_lv=5,
+    version=__version__
+))
+Passive_Skill_list.append(PassiveSkill(
+    id=31,
+    group_id=9,
+    ps_name='无影手',
+    ps_lv=2,
+    buff_type='忽视对手回合',
+    buff_value=12,
+    learn_lv=5,
+    version=__version__
+))
+Passive_Skill_list.append(PassiveSkill(
+    id=32,
+    group_id=9,
+    ps_name='无影手',
+    ps_lv=3,
+    buff_type='忽视对手回合',
+    buff_value=16,
+    learn_lv=5,
+    version=__version__
+))
+Passive_Skill_list.append(PassiveSkill(
+    id=33,
+    group_id=9,
+    ps_name='无影手',
+    ps_lv=4,
+    buff_type='忽视对手回合',
+    buff_value=20,
+    learn_lv=5,
+    version=__version__
+))
+Passive_Skill_list.append(PassiveSkill(
+    id=34,
+    group_id=9,
+    ps_name='无影手',
+    ps_lv=5,
+    buff_type='忽视对手回合',
+    buff_value=24,
+    learn_lv=5,
+    version=__version__
+))
+Passive_Skill_list.append(PassiveSkill(
+    id=35,
+    group_id=10,
+    ps_name='大海无量',
+    ps_lv=0,
+    buff_type='反伤对手',
+    buff_value=10,
+    learn_lv=5,
+    version=__version__
+))
+Passive_Skill_list.append(PassiveSkill(
+    id=36,
+    group_id=10,
+    ps_name='大海无量',
+    ps_lv=1,
+    buff_type='反伤对手',
+    buff_value=20,
+    learn_lv=5,
+    version=__version__
+))
+Passive_Skill_list.append(PassiveSkill(
+    id=37,
+    group_id=10,
+    ps_name='大海无量',
+    ps_lv=2,
+    buff_type='反伤对手',
+    buff_value=40,
+    learn_lv=5,
+    version=__version__
+))
+Passive_Skill_list.append(PassiveSkill(
+    id=38,
+    group_id=10,
+    ps_name='大海无量',
+    ps_lv=3,
+    buff_type='反伤对手',
+    buff_value=60,
+    learn_lv=5,
+    version=__version__
+))
+Passive_Skill_list.append(PassiveSkill(
+    id=39,
+    group_id=10,
+    ps_name='大海无量',
+    ps_lv=4,
+    buff_type='反伤对手',
+    buff_value=80,
+    learn_lv=5,
+    version=__version__
+))
+Passive_Skill_list.append(PassiveSkill(
+    id=40,
+    group_id=10,
+    ps_name='大海无量',
+    ps_lv=5,
+    buff_type='反伤对手',
+    buff_value=100,
+    learn_lv=5,
+    version=__version__
+))
+Passive_Skill_list.append(PassiveSkill(
+    id=41,
+    group_id=11,
+    ps_name='皮糙肉厚',
+    ps_lv=0,
+    buff_type='增加基础减伤',
+    buff_value=4,
+    learn_lv=5,
+    version=__version__
+))
+Passive_Skill_list.append(PassiveSkill(
+    id=42,
+    group_id=11,
+    ps_name='皮糙肉厚',
+    ps_lv=1,
+    buff_type='增加基础减伤',
+    buff_value=8,
+    learn_lv=5,
+    version=__version__
+))
+Passive_Skill_list.append(PassiveSkill(
+    id=43,
+    group_id=11,
+    ps_name='皮糙肉厚',
+    ps_lv=2,
+    buff_type='增加基础减伤',
+    buff_value=12,
+    learn_lv=5,
+    version=__version__
+))
+Passive_Skill_list.append(PassiveSkill(
+    id=44,
+    group_id=11,
+    ps_name='皮糙肉厚',
+    ps_lv=3,
+    buff_type='增加基础减伤',
+    buff_value=16,
+    learn_lv=5,
+    version=__version__
+))
+Passive_Skill_list.append(PassiveSkill(
+    id=45,
+    group_id=11,
+    ps_name='皮糙肉厚',
+    ps_lv=4,
+    buff_type='增加基础减伤',
+    buff_value=20,
+    learn_lv=5,
+    version=__version__
+))
+Passive_Skill_list.append(PassiveSkill(
+    id=46,
+    group_id=11,
+    ps_name='皮糙肉厚',
+    ps_lv=5,
+    buff_type='增加基础减伤',
+    buff_value=24,
+    learn_lv=5,
+    version=__version__
+))
+Passive_Skill_list.append(PassiveSkill(
+    id=47,
+    group_id=12,
+    ps_name='凌波微步',
+    ps_lv=0,
+    buff_type='增加闪避率',
+    buff_value=4,
+    learn_lv=5,
+    version=__version__
+))
+Passive_Skill_list.append(PassiveSkill(
+    id=48,
+    group_id=12,
+    ps_name='凌波微步',
+    ps_lv=1,
+    buff_type='增加闪避率',
+    buff_value=8,
+    learn_lv=5,
+    version=__version__
+))
+Passive_Skill_list.append(PassiveSkill(
+    id=49,
+    group_id=12,
+    ps_name='凌波微步',
+    ps_lv=2,
+    buff_type='增加闪避率',
+    buff_value=12,
+    learn_lv=5,
+    version=__version__
+))
+Passive_Skill_list.append(PassiveSkill(
+    id=50,
+    group_id=12,
+    ps_name='凌波微步',
+    ps_lv=3,
+    buff_type='增加闪避率',
+    buff_value=16,
+    learn_lv=5,
+    version=__version__
+))
+Passive_Skill_list.append(PassiveSkill(
+    id=51,
+    group_id=12,
+    ps_name='凌波微步',
+    ps_lv=4,
+    buff_type='增加闪避率',
+    buff_value=20,
+    learn_lv=5,
+    version=__version__
+))
+Passive_Skill_list.append(PassiveSkill(
+    id=52,
+    group_id=12,
+    ps_name='凌波微步',
+    ps_lv=5,
+    buff_type='增加闪避率',
+    buff_value=24,
+    learn_lv=5,
+    version=__version__
+))
+Passive_Skill_list.append(PassiveSkill(
+    id=53,
+    group_id=13,
+    ps_name='惯用重物',
+    ps_lv=0,
+    buff_type='增加重型武器伤害',
+    buff_value=3,
+    learn_lv=5,
+    version=__version__
+))
+Passive_Skill_list.append(PassiveSkill(
+    id=54,
+    group_id=13,
+    ps_name='惯用重物',
+    ps_lv=1,
+    buff_type='增加重型武器伤害',
+    buff_value=6,
+    learn_lv=5,
+    version=__version__
+))
+Passive_Skill_list.append(PassiveSkill(
+    id=55,
+    group_id=13,
+    ps_name='惯用重物',
+    ps_lv=2,
+    buff_type='增加重型武器伤害',
+    buff_value=9,
+    learn_lv=5,
+    version=__version__
+))
+Passive_Skill_list.append(PassiveSkill(
+    id=56,
+    group_id=13,
+    ps_name='惯用重物',
+    ps_lv=3,
+    buff_type='增加重型武器伤害',
+    buff_value=12,
+    learn_lv=5,
+    version=__version__
+))
+Passive_Skill_list.append(PassiveSkill(
+    id=57,
+    group_id=13,
+    ps_name='惯用重物',
+    ps_lv=4,
+    buff_type='增加重型武器伤害',
+    buff_value=15,
+    learn_lv=5,
+    version=__version__
+))
+Passive_Skill_list.append(PassiveSkill(
+    id=58,
+    group_id=13,
+    ps_name='惯用重物',
+    ps_lv=5,
+    buff_type='增加重型武器伤害',
+    buff_value=18,
+    learn_lv=5,
+    version=__version__
+))
+Passive_Skill_list.append(PassiveSkill(
+    id=59,
+    group_id=14,
+    ps_name='避重就轻',
+    ps_lv=0,
+    buff_type='增加中小型武器伤害，增加对大型武器闪避',
+    buff_value=3,
+    learn_lv=5,
+    version=__version__
+))
+Passive_Skill_list.append(PassiveSkill(
+    id=60,
+    group_id=14,
+    ps_name='避重就轻',
+    ps_lv=1,
+    buff_type='增加中小型武器伤害，增加对大型武器闪避',
+    buff_value=6,
+    learn_lv=5,
+    version=__version__
+))
+Passive_Skill_list.append(PassiveSkill(
+    id=61,
+    group_id=14,
+    ps_name='避重就轻',
+    ps_lv=2,
+    buff_type='增加中小型武器伤害，增加对大型武器闪避',
+    buff_value=9,
+    learn_lv=5,
+    version=__version__
+))
+Passive_Skill_list.append(PassiveSkill(
+    id=62,
+    group_id=14,
+    ps_name='避重就轻',
+    ps_lv=3,
+    buff_type='增加中小型武器伤害，增加对大型武器闪避',
+    buff_value=12,
+    learn_lv=5,
+    version=__version__
+))
+Passive_Skill_list.append(PassiveSkill(
+    id=63,
+    group_id=14,
+    ps_name='避重就轻',
+    ps_lv=4,
+    buff_type='增加中小型武器伤害，增加对大型武器闪避',
+    buff_value=15,
+    learn_lv=5,
+    version=__version__
+))
+Passive_Skill_list.append(PassiveSkill(
+    id=64,
+    group_id=14,
+    ps_name='避重就轻',
+    ps_lv=5,
+    buff_type='增加中小型武器伤害，增加对大型武器闪避',
+    buff_value=18,
+    learn_lv=5,
+    version=__version__
+))
+Passive_Skill_list.append(PassiveSkill(
+    id=65,
+    group_id=15,
+    ps_name='装死',
+    ps_lv=0,
+    buff_type='危险时刻救你一命，有机会免死一次',
+    learn_lv=5,
+    version=__version__
+))
+Passive_Skill_list.append(PassiveSkill(
+    id=66,
+    group_id=16,
+    ps_name='易筋经',
+    ps_lv=0,
+    buff_type='提高所有主动技能伤害',
+    buff_value=4,
+    learn_lv=5,
+    version=__version__
+))
+Passive_Skill_list.append(PassiveSkill(
+    id=67,
+    group_id=16,
+    ps_name='易筋经',
+    ps_lv=1,
+    buff_type='提高所有主动技能伤害',
+    buff_value=8,
+    learn_lv=5,
+    version=__version__
+))
+Passive_Skill_list.append(PassiveSkill(
+    id=68,
+    group_id=16,
+    ps_name='易筋经',
+    ps_lv=2,
+    buff_type='提高所有主动技能伤害',
+    buff_value=12,
+    learn_lv=5,
+    version=__version__
+))
+Passive_Skill_list.append(PassiveSkill(
+    id=69,
+    group_id=16,
+    ps_name='易筋经',
+    ps_lv=3,
+    buff_type='提高所有主动技能伤害',
+    buff_value=16,
+    learn_lv=5,
+    version=__version__
+))
+Passive_Skill_list.append(PassiveSkill(
+    id=70,
+    group_id=16,
+    ps_name='易筋经',
+    ps_lv=4,
+    buff_type='提高所有主动技能伤害',
+    buff_value=20,
+    learn_lv=5,
+    version=__version__
+))
+Passive_Skill_list.append(PassiveSkill(
+    id=71,
+    group_id=16,
+    ps_name='易筋经',
+    ps_lv=5,
+    buff_type='提高所有主动技能伤害',
+    buff_value=24,
+    learn_lv=5,
+    version=__version__
+))
+Passive_Skill_list.append(PassiveSkill(
+    id=72,
+    group_id=17,
+    ps_name='黯然一击',
+    ps_lv=0,
+    buff_type='有概率使主动技能暴击',
+    buff_value=3,
+    learn_lv=5,
+    version=__version__
+))
+Passive_Skill_list.append(PassiveSkill(
+    id=73,
+    group_id=17,
+    ps_name='黯然一击',
+    ps_lv=1,
+    buff_type='有概率使主动技能暴击',
+    buff_value=6,
+    learn_lv=5,
+    version=__version__
+))
+Passive_Skill_list.append(PassiveSkill(
+    id=74,
+    group_id=17,
+    ps_name='黯然一击',
+    ps_lv=2,
+    buff_type='有概率使主动技能暴击',
+    buff_value=9,
+    learn_lv=5,
+    version=__version__
+))
+Passive_Skill_list.append(PassiveSkill(
+    id=75,
+    group_id=17,
+    ps_name='黯然一击',
+    ps_lv=3,
+    buff_type='有概率使主动技能暴击',
+    buff_value=12,
+    learn_lv=5,
+    version=__version__
+))
+Passive_Skill_list.append(PassiveSkill(
+    id=76,
+    group_id=17,
+    ps_name='黯然一击',
+    ps_lv=4,
+    buff_type='有概率使主动技能暴击',
+    buff_value=15,
+    learn_lv=5,
+    version=__version__
+))
+Passive_Skill_list.append(PassiveSkill(
+    id=77,
+    group_id=17,
+    ps_name='黯然一击',
+    ps_lv=5,
+    buff_type='有概率使主动技能暴击',
+    buff_value=18,
+    learn_lv=5,
+    version=__version__
+))
+Passive_Skill_list.append(PassiveSkill(
+    id=78,
+    group_id=18,
+    ps_name='修心术',
+    ps_lv=0,
+    buff_type='提高所有主动技能的命中率',
+    buff_value=3,
+    learn_lv=5,
+    version=__version__
+))
+Passive_Skill_list.append(PassiveSkill(
+    id=79,
+    group_id=18,
+    ps_name='修心术',
+    ps_lv=1,
+    buff_type='提高所有主动技能的命中率',
+    buff_value=6,
+    learn_lv=5,
+    version=__version__
+))
+Passive_Skill_list.append(PassiveSkill(
+    id=80,
+    group_id=18,
+    ps_name='修心术',
+    ps_lv=2,
+    buff_type='提高所有主动技能的命中率',
+    buff_value=9,
+    learn_lv=5,
+    version=__version__
+))
+Passive_Skill_list.append(PassiveSkill(
+    id=81,
+    group_id=18,
+    ps_name='修心术',
+    ps_lv=3,
+    buff_type='提高所有主动技能的命中率',
+    buff_value=12,
+    learn_lv=5,
+    version=__version__
+))
+Passive_Skill_list.append(PassiveSkill(
+    id=82,
+    group_id=18,
+    ps_name='修心术',
+    ps_lv=4,
+    buff_type='提高所有主动技能的命中率',
+    buff_value=15,
+    learn_lv=5,
+    version=__version__
+))
+Passive_Skill_list.append(PassiveSkill(
+    id=83,
+    group_id=18,
+    ps_name='修心术',
+    ps_lv=5,
+    buff_type='提高所有主动技能的命中率',
+    buff_value=18,
+    learn_lv=5,
+    version=__version__
+))
+Passive_Skill_list.append(PassiveSkill(
+    id=84,
+    group_id=19,
+    ps_name='气功',
+    ps_lv=0,
+    buff_type='受到主动技能的伤害降低',
+    buff_value=4,
+    learn_lv=5,
+    version=__version__
+))
+Passive_Skill_list.append(PassiveSkill(
+    id=85,
+    group_id=19,
+    ps_name='气功',
+    ps_lv=1,
+    buff_type='受到主动技能的伤害降低',
+    buff_value=8,
+    learn_lv=5,
+    version=__version__
+))
+Passive_Skill_list.append(PassiveSkill(
+    id=86,
+    group_id=19,
+    ps_name='气功',
+    ps_lv=2,
+    buff_type='受到主动技能的伤害降低',
+    buff_value=12,
+    learn_lv=5,
+    version=__version__
+))
+Passive_Skill_list.append(PassiveSkill(
+    id=87,
+    group_id=19,
+    ps_name='气功',
+    ps_lv=3,
+    buff_type='受到主动技能的伤害降低',
+    buff_value=16,
+    learn_lv=5,
+    version=__version__
+))
+Passive_Skill_list.append(PassiveSkill(
+    id=88,
+    group_id=19,
+    ps_name='气功',
+    ps_lv=4,
+    buff_type='受到主动技能的伤害降低',
+    buff_value=20,
+    learn_lv=5,
+    version=__version__
+))
+Passive_Skill_list.append(PassiveSkill(
+    id=89,
+    group_id=19,
+    ps_name='气功',
+    ps_lv=2,
+    buff_type='受到主动技能的伤害降低',
+    buff_value=24,
+    learn_lv=5,
+    version=__version__
+))
+# ----被动技能配置----end
+
+# ----主动技能配置----start
+ActiveSkillConfig_list = []
+ActiveSkillConfig_list.append(ActiveSkillConfig(
+    id=1,
+    skill_name='矿泉水',
+    skill_level=0,
+    skill_type='恢复类',
+    group_id=1,
+    recover_hp=25,
+    version=__version__
+))
+ActiveSkillConfig_list.append(ActiveSkillConfig(
+    id=2,
+    skill_name='矿泉水',
+    skill_level=1,
+    skill_type='恢复类',
+    group_id=1,
+    recover_hp=28,
+    version=__version__
+))
+ActiveSkillConfig_list.append(ActiveSkillConfig(
+    id=3,
+    skill_name='矿泉水',
+    skill_level=2,
+    skill_type='恢复类',
+    group_id=1,
+    recover_hp=31,
+    version=__version__
+))
+ActiveSkillConfig_list.append(ActiveSkillConfig(
+    id=4,
+    skill_name='矿泉水',
+    skill_level=3,
+    skill_type='恢复类',
+    group_id=1,
+    recover_hp=34,
+    version=__version__
+))
+ActiveSkillConfig_list.append(ActiveSkillConfig(
+    id=5,
+    skill_name='矿泉水',
+    skill_level=4,
+    skill_type='恢复类',
+    group_id=1,
+    recover_hp=40,
+    version=__version__
+))
+ActiveSkillConfig_list.append(ActiveSkillConfig(
+    id=6,
+    skill_name='真·矿泉水',
+    skill_level=5,
+    skill_type='恢复类',
+    group_id=1,
+    recover_hp=100,
+    reset_dot=True,
+    version=__version__
+))
+ActiveSkillConfig_list.append(ActiveSkillConfig(
+    id=7,
+    skill_name='势如暴雨',
+    skill_level=0,
+    skill_type='扔武器',
+    group_id=2,
+    throw_weapons=3,
+    hitting_accuracy=0,
+    version=__version__
+))
+ActiveSkillConfig_list.append(ActiveSkillConfig(
+    id=8,
+    skill_name='势如暴雨',
+    skill_level=1,
+    skill_type='扔武器',
+    group_id=2,
+    throw_weapons=3,
+    hitting_accuracy=5,
+    version=__version__
+))
+ActiveSkillConfig_list.append(ActiveSkillConfig(
+    id=9,
+    skill_name='势如暴雨',
+    skill_level=2,
+    skill_type='扔武器',
+    group_id=2,
+    throw_weapons=3,
+    hitting_accuracy=15,
+    version=__version__
+))
+ActiveSkillConfig_list.append(ActiveSkillConfig(
+    id=10,
+    skill_name='势如暴雨',
+    skill_level=3,
+    skill_type='扔武器',
+    group_id=2,
+    throw_weapons=4,
+    hitting_accuracy=15,
+    version=__version__
+))
+ActiveSkillConfig_list.append(ActiveSkillConfig(
+    id=11,
+    skill_name='势如暴雨',
+    skill_level=4,
+    skill_type='扔武器',
+    group_id=2,
+    throw_weapons=4,
+    hitting_accuracy=30,
+    version=__version__
+))
+ActiveSkillConfig_list.append(ActiveSkillConfig(
+    id=12,
+    skill_name='排山倒海',
+    skill_level=5,
+    skill_type='扔武器',
+    group_id=2,
+    throw_weapons=5,
+    hitting_accuracy=30,
+    version=__version__
+))
+ActiveSkillConfig_list.append(ActiveSkillConfig(
+    id=13,
+    skill_name='冲锋',
+    skill_level=0,
+    skill_type='直接伤害',
+    group_id=3,
+    base_damage=15,
+    attribute_damage_type=True,
+    attribute_type='速度',
+    attribute_coefficient=50,
+    is_turn_pass=True,
+    is_turn_pass_probability=100,
+    pass_turn=1,
+    version=__version__
+))
+ActiveSkillConfig_list.append(ActiveSkillConfig(
+    id=14,
+    skill_name='冲锋',
+    skill_level=1,
+    skill_type='直接伤害',
+    group_id=3,
+    base_damage=16,
+    attribute_damage_type=True,
+    attribute_type='速度',
+    attribute_coefficient=60,
+    is_turn_pass=True,
+    is_turn_pass_probability=100,
+    pass_turn=1,
+    version=__version__
+))
+ActiveSkillConfig_list.append(ActiveSkillConfig(
+    id=15,
+    skill_name='冲锋',
+    skill_level=2,
+    skill_type='直接伤害',
+    group_id=3,
+    base_damage=17,
+    attribute_damage_type=True,
+    attribute_type='速度',
+    attribute_coefficient=70,
+    is_turn_pass=True,
+    is_turn_pass_probability=100,
+    pass_turn=1,
+    version=__version__
+))
+ActiveSkillConfig_list.append(ActiveSkillConfig(
+    id=16,
+    skill_name='冲锋',
+    skill_level=3,
+    skill_type='直接伤害',
+    group_id=3,
+    base_damage=19,
+    attribute_damage_type=True,
+    attribute_type='速度',
+    attribute_coefficient=85,
+    is_turn_pass=True,
+    is_turn_pass_probability=100,
+    pass_turn=1,
+    version=__version__
+))
+ActiveSkillConfig_list.append(ActiveSkillConfig(
+    id=17,
+    skill_name='冲锋',
+    skill_level=4,
+    skill_type='直接伤害',
+    group_id=3,
+    base_damage=21,
+    attribute_damage_type=True,
+    attribute_type='速度',
+    attribute_coefficient=100,
+    is_turn_pass=True,
+    is_turn_pass_probability=100,
+    pass_turn=1,
+    version=__version__
+))
+ActiveSkillConfig_list.append(ActiveSkillConfig(
+    id=18,
+    skill_name='野蛮冲撞',
+    skill_level=5,
+    skill_type='直接伤害',
+    group_id=3,
+    base_damage=24,
+    attribute_damage_type=True,
+    attribute_type='速度',
+    attribute_coefficient=120,
+    is_turn_pass=True,
+    is_turn_pass_probability=100,
+    pass_turn=2,
+    version=__version__
+))
+ActiveSkillConfig_list.append(ActiveSkillConfig(
+    id=19,
+    skill_name='企鹅吼',
+    skill_level=0,
+    skill_type='直接伤害',
+    group_id=4,
+    base_damage=15,
+    is_turn_pass=True,
+    is_turn_pass_probability=100,
+    pass_turn=1,
+    version=__version__
+))
+ActiveSkillConfig_list.append(ActiveSkillConfig(
+    id=20,
+    skill_name='企鹅吼',
+    skill_level=1,
+    skill_type='直接伤害',
+    group_id=4,
+    base_damage=18,
+    is_turn_pass=True,
+    is_turn_pass_probability=100,
+    pass_turn=1,
+    version=__version__
+))
+ActiveSkillConfig_list.append(ActiveSkillConfig(
+    id=21,
+    skill_name='企鹅吼',
+    skill_level=2,
+    skill_type='直接伤害',
+    group_id=4,
+    base_damage=22,
+    is_turn_pass=True,
+    is_turn_pass_probability=100,
+    pass_turn=1,
+    version=__version__
+))
+ActiveSkillConfig_list.append(ActiveSkillConfig(
+    id=22,
+    skill_name='企鹅吼',
+    skill_level=3,
+    skill_type='直接伤害',
+    group_id=4,
+    base_damage=28,
+    is_turn_pass=True,
+    is_turn_pass_probability=100,
+    pass_turn=1,
+    version=__version__
+))
+ActiveSkillConfig_list.append(ActiveSkillConfig(
+    id=23,
+    skill_name='企鹅吼',
+    skill_level=4,
+    skill_type='直接伤害',
+    group_id=4,
+    base_damage=35,
+    is_turn_pass=True,
+    is_turn_pass_probability=100,
+    pass_turn=1,
+    version=__version__
+))
+ActiveSkillConfig_list.append(ActiveSkillConfig(
+    id=24,
+    skill_name='真·企鹅吼',
+    skill_level=5,
+    skill_type='直接伤害',
+    group_id=4,
+    base_damage=35,
+    is_turn_pass=True,
+    is_turn_pass_probability=100,
+    pass_turn=2,
+    version=__version__
+))
+ActiveSkillConfig_list.append(ActiveSkillConfig(
+    id=25,
+    skill_name='晴天霹雳',
+    skill_level=0,
+    skill_type='直接伤害',
+    group_id=5,
+    base_damage=15,
+    opposite_sex_zengshang=10,
+    lv_damage_type=True,
+    lv_coefficient=150,
+    version=__version__
+))
+ActiveSkillConfig_list.append(ActiveSkillConfig(
+    id=26,
+    skill_name='晴天霹雳',
+    skill_level=1,
+    skill_type='直接伤害',
+    group_id=5,
+    base_damage=15,
+    opposite_sex_zengshang=20,
+    lv_damage_type=True,
+    lv_coefficient=150,
+    version=__version__
+))
+ActiveSkillConfig_list.append(ActiveSkillConfig(
+    id=27,
+    skill_name='晴天霹雳',
+    skill_level=2,
+    skill_type='直接伤害',
+    group_id=5,
+    base_damage=15,
+    opposite_sex_zengshang=30,
+    lv_damage_type=True,
+    lv_coefficient=150,
+    version=__version__
+))
+ActiveSkillConfig_list.append(ActiveSkillConfig(
+    id=28,
+    skill_name='晴天霹雳',
+    skill_level=3,
+    skill_type='直接伤害',
+    group_id=5,
+    base_damage=15,
+    opposite_sex_zengshang=45,
+    lv_damage_type=True,
+    lv_coefficient=150,
+    version=__version__
+))
+ActiveSkillConfig_list.append(ActiveSkillConfig(
+    id=29,
+    skill_name='晴天霹雳',
+    skill_level=4,
+    skill_type='直接伤害',
+    group_id=5,
+    base_damage=15,
+    opposite_sex_zengshang=60,
+    lv_damage_type=True,
+    lv_coefficient=150,
+    version=__version__
+))
+ActiveSkillConfig_list.append(ActiveSkillConfig(
+    id=30,
+    skill_name='肝肠寸断',
+    skill_level=5,
+    skill_type='直接伤害',
+    group_id=5,
+    base_damage=15,
+    opposite_sex_zengshang=100,
+    ignore_jiasi=True,
+    lv_damage_type=True,
+    lv_coefficient=150,
+    version=__version__
+))
+ActiveSkillConfig_list.append(ActiveSkillConfig(
+    id=31,
+    skill_name='天使之翼',
+    skill_level=0,
+    skill_type='直接伤害',
+    group_id=6,
+    base_damage=15,
+    attribute_damage_type=True,
+    attribute_type='敏捷',
+    attribute_coefficient=100,
+    can_fanji=False,
+    version=__version__
+))
+ActiveSkillConfig_list.append(ActiveSkillConfig(
+    id=32,
+    skill_name='天使之翼',
+    skill_level=1,
+    skill_type='直接伤害',
+    group_id=6,
+    base_damage=15,
+    attribute_damage_type=True,
+    attribute_type='敏捷',
+    attribute_coefficient=105,
+    can_fanji=False,
+    version=__version__
+))
+ActiveSkillConfig_list.append(ActiveSkillConfig(
+    id=33,
+    skill_name='天使之翼',
+    skill_level=2,
+    skill_type='直接伤害',
+    group_id=6,
+    base_damage=15,
+    attribute_damage_type=True,
+    attribute_type='敏捷',
+    attribute_coefficient=110,
+    can_fanji=False,
+    version=__version__
+))
+ActiveSkillConfig_list.append(ActiveSkillConfig(
+    id=34,
+    skill_name='天使之翼',
+    skill_level=3,
+    skill_type='直接伤害',
+    group_id=6,
+    base_damage=15,
+    attribute_damage_type=True,
+    attribute_type='敏捷',
+    attribute_coefficient=115,
+    can_fanji=False,
+    version=__version__
+))
+ActiveSkillConfig_list.append(ActiveSkillConfig(
+    id=35,
+    skill_name='天使之翼',
+    skill_level=4,
+    skill_type='直接伤害',
+    group_id=6,
+    base_damage=15,
+    attribute_damage_type=True,
+    attribute_type='敏捷',
+    attribute_coefficient=120,
+    can_fanji=False,
+    version=__version__
+))
+ActiveSkillConfig_list.append(ActiveSkillConfig(
+    id=36,
+    skill_name='死神之翼',
+    skill_level=5,
+    skill_type='直接伤害',
+    group_id=6,
+    base_damage=15,
+    attribute_damage_type=True,
+    attribute_type='敏捷',
+    attribute_coefficient=125,
+    can_fanji=False,
+    miss_dhwl=True,
+    bizhong=True,
+    version=__version__
+))
+ActiveSkillConfig_list.append(ActiveSkillConfig(
+    id=37,
+    skill_name='神来一击',
+    skill_level=0,
+    skill_type='生命移除',
+    group_id=7,
+    remove_hp_probability=8,
+    remove_hp_surplus=1,
+    version=__version__
+))
+ActiveSkillConfig_list.append(ActiveSkillConfig(
+    id=38,
+    skill_name='神来一击',
+    skill_level=1,
+    skill_type='生命移除',
+    group_id=7,
+    remove_hp_probability=8,
+    remove_hp_surplus=1,
+    version=__version__
+))
+ActiveSkillConfig_list.append(ActiveSkillConfig(
+    id=39,
+    skill_name='神来一击',
+    skill_level=2,
+    skill_type='生命移除',
+    group_id=7,
+    remove_hp_probability=9,
+    remove_hp_surplus=1,
+    version=__version__
+))
+ActiveSkillConfig_list.append(ActiveSkillConfig(
+    id=40,
+    skill_name='神来一击',
+    skill_level=3,
+    skill_type='生命移除',
+    group_id=7,
+    remove_hp_probability=10,
+    remove_hp_surplus=1,
+    version=__version__
+))
+ActiveSkillConfig_list.append(ActiveSkillConfig(
+    id=41,
+    skill_name='神来一击',
+    skill_level=4,
+    skill_type='生命移除',
+    group_id=7,
+    remove_hp_probability=12,
+    remove_hp_surplus=1,
+    version=__version__
+))
+ActiveSkillConfig_list.append(ActiveSkillConfig(
+    id=42,
+    skill_name='天外飞仙',
+    skill_level=5,
+    skill_type='生命移除',
+    group_id=7,
+    remove_hp_probability=15,
+    remove_hp_surplus=1,
+    version=__version__
+))
+ActiveSkillConfig_list.append(ActiveSkillConfig(
+    id=43,
+    skill_name='佛山无影脚',
+    skill_level=0,
+    skill_type='直接伤害',
+    group_id=8,
+    base_damage=30,
+    attribute_damage_type=True,
+    attribute_type='力量',
+    attribute_coefficient=50,
+    version=__version__
+))
+ActiveSkillConfig_list.append(ActiveSkillConfig(
+    id=44,
+    skill_name='佛山无影脚',
+    skill_level=1,
+    skill_type='直接伤害',
+    group_id=8,
+    base_damage=30,
+    attribute_damage_type=True,
+    attribute_type='力量',
+    attribute_coefficient=60,
+    version=__version__
+))
+ActiveSkillConfig_list.append(ActiveSkillConfig(
+    id=45,
+    skill_name='佛山无影脚',
+    skill_level=2,
+    skill_type='直接伤害',
+    group_id=8,
+    base_damage=30,
+    attribute_damage_type=True,
+    attribute_type='力量',
+    attribute_coefficient=70,
+    version=__version__
+))
+ActiveSkillConfig_list.append(ActiveSkillConfig(
+    id=46,
+    skill_name='佛山无影脚',
+    skill_level=3,
+    skill_type='直接伤害',
+    group_id=8,
+    base_damage=30,
+    attribute_damage_type=True,
+    attribute_type='力量',
+    attribute_coefficient=80,
+    version=__version__
+))
+ActiveSkillConfig_list.append(ActiveSkillConfig(
+    id=47,
+    skill_name='佛山无影脚',
+    skill_level=4,
+    skill_type='直接伤害',
+    group_id=8,
+    base_damage=30,
+    attribute_damage_type=True,
+    attribute_type='力量',
+    attribute_coefficient=120,
+    version=__version__
+))
+ActiveSkillConfig_list.append(ActiveSkillConfig(
+    id=48,
+    skill_name='飞鸿无影脚',
+    skill_level=5,
+    skill_type='直接伤害',
+    group_id=8,
+    base_damage=30,
+    attribute_damage_type=True,
+    attribute_type='力量',
+    attribute_coefficient=150,
+    version=__version__
+))
+ActiveSkillConfig_list.append(ActiveSkillConfig(
+    id=49,
+    skill_name='胶水',
+    skill_level=0,
+    skill_type='限制类',
+    group_id=9,
+    limit_type='远',
+    limit_base_probability=10,
+    limit_turn=3,
+    version=__version__
+))
+ActiveSkillConfig_list.append(ActiveSkillConfig(
+    id=50,
+    skill_name='胶水',
+    skill_level=1,
+    skill_type='限制类',
+    group_id=9,
+    limit_type='远',
+    limit_base_probability=12,
+    limit_turn=3,
+    version=__version__
+))
+ActiveSkillConfig_list.append(ActiveSkillConfig(
+    id=51,
+    skill_name='胶水',
+    skill_level=2,
+    skill_type='限制类',
+    group_id=9,
+    limit_type='远',
+    limit_base_probability=14,
+    limit_turn=3,
+    version=__version__
+))
+ActiveSkillConfig_list.append(ActiveSkillConfig(
+    id=52,
+    skill_name='胶水',
+    skill_level=3,
+    skill_type='限制类',
+    group_id=9,
+    limit_type='远',
+    limit_base_probability=17,
+    limit_turn=3,
+    version=__version__
+))
+ActiveSkillConfig_list.append(ActiveSkillConfig(
+    id=53,
+    skill_name='胶水',
+    skill_level=4,
+    skill_type='限制类',
+    group_id=9,
+    limit_type='远',
+    limit_base_probability=20,
+    limit_turn=3,
+    version=__version__
+))
+ActiveSkillConfig_list.append(ActiveSkillConfig(
+    id=54,
+    skill_name='万能胶',
+    skill_level=5,
+    skill_type='限制类',
+    group_id=9,
+    limit_type='远',
+    limit_base_probability=25,
+    limit_turn=4,
+    version=__version__
+))
+ActiveSkillConfig_list.append(ActiveSkillConfig(
+    id=55,
+    skill_name='企鹅挠痒',
+    skill_level=0,
+    skill_type='持续伤害',
+    group_id=10,
+    base_damage=5,
+    attribute_damage_type=True,
+    attribute_type='敏捷',
+    attribute_coefficient=20,
+    dot_turn=6,
+    version=__version__
+))
+ActiveSkillConfig_list.append(ActiveSkillConfig(
+    id=56,
+    skill_name='企鹅挠痒',
+    skill_level=1,
+    skill_type='持续伤害',
+    group_id=10,
+    base_damage=7,
+    attribute_damage_type=True,
+    attribute_type='敏捷',
+    attribute_coefficient=20,
+    dot_turn=6,
+    version=__version__
+))
+ActiveSkillConfig_list.append(ActiveSkillConfig(
+    id=57,
+    skill_name='企鹅挠痒',
+    skill_level=2,
+    skill_type='持续伤害',
+    group_id=10,
+    base_damage=9,
+    attribute_damage_type=True,
+    attribute_type='敏捷',
+    attribute_coefficient=20,
+    dot_turn=6,
+    version=__version__
+))
+ActiveSkillConfig_list.append(ActiveSkillConfig(
+    id=58,
+    skill_name='企鹅挠痒',
+    skill_level=3,
+    skill_type='持续伤害',
+    group_id=10,
+    base_damage=12,
+    attribute_damage_type=True,
+    attribute_type='敏捷',
+    attribute_coefficient=20,
+    dot_turn=6,
+    version=__version__
+))
+ActiveSkillConfig_list.append(ActiveSkillConfig(
+    id=59,
+    skill_name='企鹅挠痒',
+    skill_level=4,
+    skill_type='持续伤害',
+    group_id=10,
+    base_damage=15,
+    attribute_damage_type=True,
+    attribute_type='敏捷',
+    attribute_coefficient=20,
+    dot_turn=6,
+    version=__version__
+))
+ActiveSkillConfig_list.append(ActiveSkillConfig(
+    id=60,
+    skill_name='挠痒神功',
+    skill_level=5,
+    skill_type='持续伤害',
+    group_id=10,
+    base_damage=20,
+    attribute_damage_type=True,
+    attribute_type='敏捷',
+    attribute_coefficient=20,
+    dot_turn=7,
+    version=__version__
+))
+ActiveSkillConfig_list.append(ActiveSkillConfig(
+    id=61,
+    skill_name='抖抖拳',
+    skill_level=0,
+    skill_type='直接伤害',
+    group_id=11,
+    base_damage=25,
+    is_target_throw_weapons=1,
+    version=__version__
+))
+ActiveSkillConfig_list.append(ActiveSkillConfig(
+    id=62,
+    skill_name='抖抖拳',
+    skill_level=1,
+    skill_type='直接伤害',
+    group_id=11,
+    base_damage=60,
+    bizhong=True,
+    is_target_throw_weapons=1,
+    version=__version__
+))
+ActiveSkillConfig_list.append(ActiveSkillConfig(
+    id=63,
+    skill_name='抖抖拳',
+    skill_level=2,
+    skill_type='直接伤害',
+    group_id=11,
+    base_damage=35,
+    bizhong=True,
+    is_target_throw_weapons=1,
+    version=__version__
+))
+ActiveSkillConfig_list.append(ActiveSkillConfig(
+    id=64,
+    skill_name='抖抖拳',
+    skill_level=3,
+    skill_type='直接伤害',
+    group_id=11,
+    base_damage=35,
+    bizhong=True,
+    is_target_throw_weapons=2,
+    version=__version__
+))
+ActiveSkillConfig_list.append(ActiveSkillConfig(
+    id=65,
+    skill_name='抖抖拳',
+    skill_level=4,
+    skill_type='直接伤害',
+    group_id=11,
+    base_damage=45,
+    bizhong=True,
+    is_target_throw_weapons=2,
+    version=__version__
+))
+ActiveSkillConfig_list.append(ActiveSkillConfig(
+    id=66,
+    skill_name='北斗神拳',
+    skill_level=5,
+    skill_type='直接伤害',
+    group_id=11,
+    base_damage=45,
+    bizhong=True,
+    is_target_throw_weapons=3,
+    version=__version__
+))
+ActiveSkillConfig_list.append(ActiveSkillConfig(
+    id=67,
+    skill_name='龙卷风',
+    skill_level=0,
+    skill_type='直接伤害',
+    group_id=12,
+    base_damage=20,
+    attribute_damage_type=True,
+    attribute_type='力量',
+    attribute_coefficient=80,
+    version=__version__
+))
+ActiveSkillConfig_list.append(ActiveSkillConfig(
+    id=68,
+    skill_name='龙卷风',
+    skill_level=1,
+    skill_type='直接伤害',
+    group_id=12,
+    base_damage=20,
+    attribute_damage_type=True,
+    attribute_type='力量',
+    attribute_coefficient=85,
+    version=__version__
+))
+ActiveSkillConfig_list.append(ActiveSkillConfig(
+    id=69,
+    skill_name='龙卷风',
+    skill_level=2,
+    skill_type='直接伤害',
+    group_id=12,
+    base_damage=20,
+    attribute_damage_type=True,
+    attribute_type='力量',
+    attribute_coefficient=90,
+    version=__version__
+))
+ActiveSkillConfig_list.append(ActiveSkillConfig(
+    id=70,
+    skill_name='龙卷风',
+    skill_level=3,
+    skill_type='直接伤害',
+    group_id=12,
+    base_damage=20,
+    attribute_damage_type=True,
+    attribute_type='力量',
+    attribute_coefficient=95,
+    version=__version__
+))
+ActiveSkillConfig_list.append(ActiveSkillConfig(
+    id=71,
+    skill_name='龙卷风',
+    skill_level=4,
+    skill_type='直接伤害',
+    group_id=12,
+    base_damage=20,
+    attribute_damage_type=True,
+    attribute_type='力量',
+    attribute_coefficient=100,
+    version=__version__
+))
+ActiveSkillConfig_list.append(ActiveSkillConfig(
+    id=72,
+    skill_name='真·龙卷风',
+    skill_level=5,
+    skill_type='直接伤害',
+    group_id=12,
+    base_damage=20,
+    attribute_damage_type=True,
+    attribute_type='力量',
+    attribute_coefficient=100,
+    ignore_jiasi=True,
+    version=__version__
+))
+ActiveSkillConfig_list.append(ActiveSkillConfig(
+    id=73,
+    skill_name='疾风步',
+    skill_level=0,
+    skill_type='直接伤害',
+    group_id=13,
+    attribute_damage_type=True,
+    attribute_type='速度',
+    attribute_coefficient=50,
+    buff_type='速度',
+    buff_turn=1,
+    buff_value=10,
+    buff_zj='buff',
+    version=__version__
+))
+ActiveSkillConfig_list.append(ActiveSkillConfig(
+    id=74,
+    skill_name='疾风步',
+    skill_level=1,
+    skill_type='直接伤害',
+    group_id=13,
+    attribute_damage_type=True,
+    attribute_type='速度',
+    attribute_coefficient=60,
+    buff_type='速度',
+    buff_turn=1,
+    buff_value=15,
+    buff_zj='buff',
+    version=__version__
+))
+ActiveSkillConfig_list.append(ActiveSkillConfig(
+    id=75,
+    skill_name='疾风步',
+    skill_level=2,
+    skill_type='直接伤害',
+    group_id=13,
+    attribute_damage_type=True,
+    attribute_type='速度',
+    attribute_coefficient=70,
+    buff_type='速度',
+    buff_turn=1,
+    buff_value=20,
+    buff_zj='buff',
+    version=__version__
+))
+ActiveSkillConfig_list.append(ActiveSkillConfig(
+    id=76,
+    skill_name='疾风步',
+    skill_level=3,
+    skill_type='直接伤害',
+    group_id=13,
+    attribute_damage_type=True,
+    attribute_type='速度',
+    attribute_coefficient=80,
+    buff_type='速度',
+    buff_turn=1,
+    buff_value=30,
+    buff_zj='buff',
+    version=__version__
+))
+ActiveSkillConfig_list.append(ActiveSkillConfig(
+    id=77,
+    skill_name='疾风步',
+    skill_level=4,
+    skill_type='直接伤害',
+    group_id=13,
+    attribute_damage_type=True,
+    attribute_type='速度',
+    attribute_coefficient=90,
+    buff_type='速度',
+    buff_turn=1,
+    buff_value=40,
+    buff_zj='buff',
+    version=__version__
+))
+ActiveSkillConfig_list.append(ActiveSkillConfig(
+    id=78,
+    skill_name='神行百变',
+    skill_level=5,
+    skill_type='直接伤害',
+    group_id=13,
+    attribute_damage_type=True,
+    attribute_type='速度',
+    attribute_coefficient=100,
+    buff_type='速度',
+    buff_turn=1,
+    buff_value=60,
+    buff_zj='buff',
+    ignore_jiasi=True,
+    version=__version__
+))
+# ----主动技能配置----end
+
+# ----武器配置----start
+WeaponConfig_list = []
+WeaponConfig_list.append(WeaponConfig(
+    id=1,
+    weapon_name='木剑',
+    min_atk=10,
+    max_atk=25,
+    weapon_type='小型',
+    double_hit=True,
+    double_hit_probability=5,
+    double_hit_count=2,
+    ignore_jiasi=True,
+    fanji_miss=5,
+    group_id=1,
+    group_type='普通武器',
+    far_and_near='远',
+    version=__version__
+))
+WeaponConfig_list.append(WeaponConfig(
+    id=2,
+    weapon_name='判官笔',
+    min_atk=10,
+    max_atk=15,
+    weapon_type='小型',
+    bizhong=True,
+    group_id=2,
+    group_type='普通武器',
+    far_and_near='远',
+    version=__version__
+))
+WeaponConfig_list.append(WeaponConfig(
+    id=3,
+    weapon_name='汽水罐',
+    min_atk=4,
+    max_atk=6,
+    weapon_type='小型',
+    bizhong=True,
+    double_hit=True,
+    double_hit_probability=100,
+    double_hit_count=2,
+    group_id=3,
+    group_type='普通武器',
+    far_and_near='远',
+    version=__version__
+))
+WeaponConfig_list.append(WeaponConfig(
+    id=4,
+    weapon_name='接力棒',
+    min_atk=11,
+    max_atk=16,
+    weapon_type='小型',
+    double_hit=True,
+    double_hit_probability=15,
+    double_hit_count=2,
+    group_id=4,
+    group_type='普通武器',
+    far_and_near='远',
+    version=__version__
+))
+WeaponConfig_list.append(WeaponConfig(
+    id=5,
+    weapon_name='短剑',
+    min_atk=5,
+    max_atk=9,
+    weapon_type='小型',
+    double_hit=True,
+    double_hit_probability=25,
+    double_hit_count=2,
+    group_id=5,
+    group_type='普通武器',
+    far_and_near='远',
+    version=__version__
+))
+WeaponConfig_list.append(WeaponConfig(
+    id=6,
+    weapon_name='棒球棍',
+    min_atk=15,
+    max_atk=20,
+    weapon_type='大型',
+    is_turn_pass=True,
+    is_turn_pass_probability=15,
+    pass_turn=1,
+    group_id=6,
+    group_type='普通武器',
+    far_and_near='近',
+    version=__version__
+))
+WeaponConfig_list.append(WeaponConfig(
+    id=7,
+    weapon_name='板凳',
+    min_atk=11,
+    max_atk=13,
+    weapon_type='中型',
+    is_turn_pass=True,
+    is_turn_pass_probability=100,
+    pass_turn=2,
+    group_id=7,
+    group_type='普通武器',
+    far_and_near='近',
+    version=__version__
+))
+WeaponConfig_list.append(WeaponConfig(
+    id=8,
+    weapon_name='屠龙刀',
+    min_atk=1,
+    max_atk=50,
+    weapon_type='大型',
+    double_hit=True,
+    double_hit_probability=100,
+    double_hit_count=2,
+    bizhong=True,
+    group_id=8,
+    group_type='传说武器',
+    far_and_near='近',
+    version=__version__
+))
+WeaponConfig_list.append(WeaponConfig(
+    id=9,
+    weapon_name='轩辕剑',
+    min_atk=30,
+    max_atk=60,
+    weapon_type='中型',
+    bizhong=True,
+    absorb=30,
+    group_id=9,
+    group_type='传说武器',
+    far_and_near='远',
+    version=__version__
+))
+WeaponConfig_list.append(WeaponConfig(
+    id=10,
+    weapon_name='如意金箍棒',
+    min_atk=45,
+    max_atk=55,
+    weapon_type='中型',
+    bizhong=True,
+    miss_dhwl=True,
+    ignore_jiasi=True,
+    group_id=10,
+    group_type='传说武器',
+    far_and_near='远',
+    version=__version__
+))
+WeaponConfig_list.append(WeaponConfig(
+    id=11,
+    weapon_name='绣花针',
+    min_atk=45,
+    max_atk=55,
+    weapon_type='小型',
+    bizhong=True,
+    group_id=11,
+    group_type='传说武器',
+    far_and_near='远',
+    version=__version__
+))
+WeaponConfig_list.append(WeaponConfig(
+    id=12,
+    weapon_name='红缨枪',
+    weapon_level=0,
+    min_atk=15,
+    max_atk=30,
+    weapon_type='小型',
+    double_hit=True,
+    double_hit_probability=10,
+    double_hit_count=2,
+    group_id=12,
+    group_type='神器',
+    far_and_near='远',
+    version=__version__
+))
+WeaponConfig_list.append(WeaponConfig(
+    id=13,
+    weapon_name='红缨枪',
+    weapon_level=1,
+    min_atk=17,
+    max_atk=32,
+    weapon_type='小型',
+    double_hit=True,
+    double_hit_probability=10,
+    double_hit_count=2,
+    group_id=12,
+    group_type='神器',
+    far_and_near='远',
+    version=__version__
+))
+WeaponConfig_list.append(WeaponConfig(
+    id=14,
+    weapon_name='红缨枪',
+    weapon_level=2,
+    min_atk=19,
+    max_atk=34,
+    weapon_type='小型',
+    double_hit=True,
+    double_hit_probability=10,
+    double_hit_count=2,
+    group_id=12,
+    group_type='神器',
+    far_and_near='远',
+    version=__version__
+))
+WeaponConfig_list.append(WeaponConfig(
+    id=15,
+    weapon_name='红缨枪',
+    weapon_level=3,
+    min_atk=21,
+    max_atk=36,
+    weapon_type='小型',
+    double_hit=True,
+    double_hit_probability=15,
+    double_hit_count=2,
+    group_id=12,
+    group_type='神器',
+    far_and_near='远',
+    version=__version__
+))
+WeaponConfig_list.append(WeaponConfig(
+    id=16,
+    weapon_name='红缨枪',
+    weapon_level=4,
+    min_atk=23,
+    max_atk=38,
+    weapon_type='小型',
+    double_hit=True,
+    double_hit_probability=20,
+    double_hit_count=2,
+    group_id=12,
+    group_type='神器',
+    far_and_near='远',
+    version=__version__
+))
+WeaponConfig_list.append(WeaponConfig(
+    id=17,
+    weapon_name='真·红缨枪',
+    weapon_level=5,
+    min_atk=15,
+    max_atk=30,
+    weapon_type='小型',
+    double_hit=True,
+    double_hit_probability=20,
+    double_hit_count=2,
+    ignore_jiasi=True,
+    group_id=12,
+    group_type='神器',
+    far_and_near='远',
+    version=__version__
+))
+WeaponConfig_list.append(WeaponConfig(
+    id=18,
+    weapon_name='双节棍',
+    weapon_level=0,
+    min_atk=20,
+    max_atk=35,
+    weapon_type='中型',
+    group_id=13,
+    group_type='神器',
+    far_and_near='远',
+    version=__version__
+))
+WeaponConfig_list.append(WeaponConfig(
+    id=19,
+    weapon_name='双节棍',
+    weapon_level=1,
+    min_atk=22,
+    max_atk=37,
+    weapon_type='中型',
+    group_id=13,
+    group_type='神器',
+    far_and_near='远',
+    version=__version__
+))
+WeaponConfig_list.append(WeaponConfig(
+    id=20,
+    weapon_name='双节棍',
+    weapon_level=2,
+    min_atk=24,
+    max_atk=39,
+    weapon_type='中型',
+    group_id=13,
+    group_type='神器',
+    far_and_near='远',
+    version=__version__
+))
+WeaponConfig_list.append(WeaponConfig(
+    id=21,
+    weapon_name='双节棍',
+    weapon_level=3,
+    min_atk=27,
+    max_atk=42,
+    weapon_type='中型',
+    double_hit=True,
+    double_hit_probability=5,
+    double_hit_count=2,
+    group_id=13,
+    group_type='神器',
+    far_and_near='远',
+    version=__version__
+))
+WeaponConfig_list.append(WeaponConfig(
+    id=22,
+    weapon_name='双节棍',
+    weapon_level=4,
+    min_atk=30,
+    max_atk=45,
+    weapon_type='中型',
+    double_hit=True,
+    double_hit_probability=10,
+    double_hit_count=2,
+    group_id=13,
+    group_type='神器',
+    far_and_near='远',
+    version=__version__
+))
+WeaponConfig_list.append(WeaponConfig(
+    id=23,
+    weapon_name='真·双节棍',
+    weapon_level=5,
+    min_atk=30,
+    max_atk=45,
+    weapon_type='中型',
+    double_hit=True,
+    double_hit_probability=40,
+    double_hit_count=2,
+    group_id=13,
+    group_type='神器',
+    far_and_near='远',
+    version=__version__
+))
+WeaponConfig_list.append(WeaponConfig(
+    id=24,
+    weapon_name='宽刃剑',
+    weapon_level=0,
+    min_atk=6,
+    max_atk=10,
+    weapon_type='中型',
+    same_sex_zs=20,
+    group_id=14,
+    group_type='神器',
+    far_and_near='远',
+    version=__version__
+))
+WeaponConfig_list.append(WeaponConfig(
+    id=25,
+    weapon_name='宽刃剑',
+    weapon_level=1,
+    min_atk=8,
+    max_atk=12,
+    weapon_type='中型',
+    same_sex_zs=30,
+    group_id=14,
+    group_type='神器',
+    far_and_near='远',
+    version=__version__
+))
+WeaponConfig_list.append(WeaponConfig(
+    id=26,
+    weapon_name='宽刃剑',
+    weapon_level=2,
+    min_atk=10,
+    max_atk=15,
+    weapon_type='中型',
+    same_sex_zs=40,
+    group_id=14,
+    group_type='神器',
+    far_and_near='远',
+    version=__version__
+))
+WeaponConfig_list.append(WeaponConfig(
+    id=27,
+    weapon_name='宽刃剑',
+    weapon_level=3,
+    min_atk=12,
+    max_atk=18,
+    weapon_type='中型',
+    same_sex_zs=60,
+    group_id=14,
+    group_type='神器',
+    far_and_near='远',
+    version=__version__
+))
+WeaponConfig_list.append(WeaponConfig(
+    id=28,
+    weapon_name='宽刃剑',
+    weapon_level=4,
+    min_atk=14,
+    max_atk=22,
+    weapon_type='中型',
+    same_sex_zs=80,
+    group_id=14,
+    group_type='神器',
+    far_and_near='远',
+    version=__version__
+))
+WeaponConfig_list.append(WeaponConfig(
+    id=29,
+    weapon_name='龙鸣剑',
+    weapon_level=5,
+    min_atk=16,
+    max_atk=26,
+    weapon_type='中型',
+    same_sex_zs=100,
+    group_id=14,
+    group_type='神器',
+    far_and_near='远',
+    version=__version__
+))
+WeaponConfig_list.append(WeaponConfig(
+    id=30,
+    weapon_name='板砖',
+    weapon_level=0,
+    min_atk=10,
+    max_atk=40,
+    weapon_type='中型',
+    is_turn_pass=True,
+    is_turn_pass_probability=10,
+    pass_turn=1,
+    fanji_miss=10,
+    group_id=15,
+    group_type='神器',
+    far_and_near='远',
+    version=__version__
+))
+WeaponConfig_list.append(WeaponConfig(
+    id=31,
+    weapon_name='板砖',
+    weapon_level=1,
+    min_atk=11,
+    max_atk=41,
+    weapon_type='中型',
+    is_turn_pass=True,
+    is_turn_pass_probability=11,
+    pass_turn=1,
+    fanji_miss=11,
+    group_id=15,
+    group_type='神器',
+    far_and_near='远',
+    version=__version__
+))
+WeaponConfig_list.append(WeaponConfig(
+    id=32,
+    weapon_name='板砖',
+    weapon_level=2,
+    min_atk=12,
+    max_atk=42,
+    weapon_type='中型',
+    is_turn_pass=True,
+    is_turn_pass_probability=12,
+    pass_turn=1,
+    fanji_miss=12,
+    group_id=15,
+    group_type='神器',
+    far_and_near='远',
+    version=__version__
+))
+WeaponConfig_list.append(WeaponConfig(
+    id=33,
+    weapon_name='板砖',
+    weapon_level=3,
+    min_atk=13,
+    max_atk=43,
+    weapon_type='中型',
+    is_turn_pass=True,
+    is_turn_pass_probability=12,
+    pass_turn=1,
+    fanji_miss=13,
+    group_id=15,
+    group_type='神器',
+    far_and_near='远',
+    version=__version__
+))
+WeaponConfig_list.append(WeaponConfig(
+    id=34,
+    weapon_name='板砖',
+    weapon_level=4,
+    min_atk=14,
+    max_atk=44,
+    weapon_type='中型',
+    is_turn_pass=True,
+    is_turn_pass_probability=12,
+    pass_turn=1,
+    fanji_miss=14,
+    group_id=15,
+    group_type='神器',
+    far_and_near='远',
+    version=__version__
+))
+WeaponConfig_list.append(WeaponConfig(
+    id=35,
+    weapon_name='真·板砖',
+    weapon_level=5,
+    min_atk=15,
+    max_atk=45,
+    weapon_type='中型',
+    is_turn_pass=True,
+    is_turn_pass_probability=15,
+    pass_turn=1,
+    fanji_miss=15,
+    group_id=15,
+    group_type='神器',
+    far_and_near='远',
+    version=__version__
+))
+WeaponConfig_list.append(WeaponConfig(
+    id=36,
+    weapon_name='铁铲',
+    weapon_level=0,
+    min_atk=12,
+    max_atk=18,
+    miss=20,
+    weapon_type='中型',
+    group_id=16,
+    group_type='神器',
+    far_and_near='远',
+    version=__version__
+))
+WeaponConfig_list.append(WeaponConfig(
+    id=37,
+    weapon_name='铁铲',
+    weapon_level=1,
+    min_atk=14,
+    max_atk=20,
+    miss=30,
+    weapon_type='中型',
+    group_id=16,
+    group_type='神器',
+    far_and_near='远',
+    version=__version__
+))
+WeaponConfig_list.append(WeaponConfig(
+    id=38,
+    weapon_name='铁铲',
+    weapon_level=2,
+    min_atk=16,
+    max_atk=22,
+    miss=40,
+    weapon_type='中型',
+    group_id=16,
+    group_type='神器',
+    far_and_near='远',
+    version=__version__
+))
+WeaponConfig_list.append(WeaponConfig(
+    id=39,
+    weapon_name='铁铲',
+    weapon_level=3,
+    min_atk=19,
+    max_atk=25,
+    miss=60,
+    weapon_type='中型',
+    group_id=16,
+    group_type='神器',
+    far_and_near='远',
+    version=__version__
+))
+WeaponConfig_list.append(WeaponConfig(
+    id=40,
+    weapon_name='铁铲',
+    weapon_level=0,
+    min_atk=22,
+    max_atk=28,
+    miss=80,
+    weapon_type='中型',
+    group_id=16,
+    group_type='神器',
+    far_and_near='远',
+    version=__version__
+))
+WeaponConfig_list.append(WeaponConfig(
+    id=41,
+    weapon_name='食神之铲',
+    weapon_level=5,
+    min_atk=26,
+    max_atk=32,
+    miss=100,
+    weapon_type='中型',
+    group_id=16,
+    group_type='神器',
+    far_and_near='远',
+    version=__version__
+))
+WeaponConfig_list.append(WeaponConfig(
+    id=42,
+    weapon_name='开山斧',
+    weapon_level=0,
+    min_atk=12,
+    max_atk=18,
+    weapon_type='大型',
+    is_turn_pass=True,
+    is_turn_pass_probability=5,
+    pass_turn=1,
+    fanji_miss=5,
+    group_id=17,
+    group_type='神器',
+    far_and_near='近',
+    version=__version__
+))
+WeaponConfig_list.append(WeaponConfig(
+    id=43,
+    weapon_name='开山斧',
+    weapon_level=1,
+    min_atk=14,
+    max_atk=20,
+    weapon_type='大型',
+    is_turn_pass=True,
+    is_turn_pass_probability=6,
+    pass_turn=1,
+    fanji_miss=6,
+    group_id=17,
+    group_type='神器',
+    far_and_near='近',
+    version=__version__
+))
+WeaponConfig_list.append(WeaponConfig(
+    id=44,
+    weapon_name='开山斧',
+    weapon_level=2,
+    min_atk=16,
+    max_atk=22,
+    weapon_type='大型',
+    is_turn_pass=True,
+    is_turn_pass_probability=7,
+    pass_turn=1,
+    fanji_miss=7,
+    group_id=17,
+    group_type='神器',
+    far_and_near='近',
+    version=__version__
+))
+WeaponConfig_list.append(WeaponConfig(
+    id=45,
+    weapon_name='开山斧',
+    weapon_level=3,
+    min_atk=19,
+    max_atk=25,
+    weapon_type='大型',
+    is_turn_pass=True,
+    is_turn_pass_probability=8,
+    pass_turn=1,
+    fanji_miss=8,
+    group_id=17,
+    group_type='神器',
+    far_and_near='近',
+    version=__version__
+))
+WeaponConfig_list.append(WeaponConfig(
+    id=46,
+    weapon_name='开山斧',
+    weapon_level=4,
+    min_atk=22,
+    max_atk=28,
+    weapon_type='大型',
+    is_turn_pass=True,
+    is_turn_pass_probability=10,
+    pass_turn=1,
+    fanji_miss=10,
+    group_id=17,
+    group_type='神器',
+    far_and_near='近',
+    version=__version__
+))
+WeaponConfig_list.append(WeaponConfig(
+    id=47,
+    weapon_name='真·开山斧',
+    weapon_level=5,
+    min_atk=14,
+    max_atk=18,
+    weapon_type='大型',
+    is_turn_pass=True,
+    is_turn_pass_probability=15,
+    pass_turn=1,
+    fanji_miss=15,
+    group_id=17,
+    group_type='神器',
+    far_and_near='近',
+    version=__version__
+))
+WeaponConfig_list.append(WeaponConfig(
+    id=48,
+    weapon_name='狂魔镰',
+    weapon_level=0,
+    min_atk=15,
+    max_atk=25,
+    weapon_type='大型',
+    bizhong=True,
+    can_fanji=False,
+    group_id=18,
+    group_type='神器',
+    far_and_near='近',
+    version=__version__
+))
+WeaponConfig_list.append(WeaponConfig(
+    id=49,
+    weapon_name='狂魔镰',
+    weapon_level=1,
+    min_atk=17,
+    max_atk=27,
+    weapon_type='大型',
+    bizhong=True,
+    can_fanji=False,
+    group_id=18,
+    group_type='神器',
+    far_and_near='近',
+    version=__version__
+))
+WeaponConfig_list.append(WeaponConfig(
+    id=50,
+    weapon_name='狂魔镰',
+    weapon_level=2,
+    min_atk=19,
+    max_atk=29,
+    weapon_type='大型',
+    bizhong=True,
+    can_fanji=False,
+    group_id=18,
+    group_type='神器',
+    far_and_near='近',
+    version=__version__
+))
+WeaponConfig_list.append(WeaponConfig(
+    id=51,
+    weapon_name='狂魔镰',
+    weapon_level=3,
+    min_atk=21,
+    max_atk=31,
+    weapon_type='大型',
+    bizhong=True,
+    can_fanji=False,
+    group_id=18,
+    group_type='神器',
+    far_and_near='近',
+    version=__version__
+))
+WeaponConfig_list.append(WeaponConfig(
+    id=52,
+    weapon_name='狂魔镰',
+    weapon_level=4,
+    min_atk=24,
+    max_atk=34,
+    weapon_type='大型',
+    bizhong=True,
+    can_fanji=False,
+    group_id=18,
+    group_type='神器',
+    far_and_near='近',
+    version=__version__
+))
+WeaponConfig_list.append(WeaponConfig(
+    id=53,
+    weapon_name='真·狂魔镰',
+    weapon_level=5,
+    min_atk=28,
+    max_atk=38,
+    weapon_type='大型',
+    bizhong=True,
+    can_fanji=False,
+    miss_dhwl=True,
+    group_id=18,
+    group_type='神器',
+    far_and_near='近',
+    version=__version__
+))
+WeaponConfig_list.append(WeaponConfig(
+    id=54,
+    weapon_name='青龙戟',
+    weapon_level=0,
+    min_atk=15,
+    max_atk=20,
+    fanji_miss=5,
+    weapon_type='大型',
+    group_id=19,
+    group_type='神器',
+    far_and_near='近',
+    version=__version__
+))
+WeaponConfig_list.append(WeaponConfig(
+    id=55,
+    weapon_name='青龙戟',
+    weapon_level=1,
+    min_atk=17,
+    max_atk=22,
+    fanji_miss=6,
+    weapon_type='大型',
+    group_id=19,
+    group_type='神器',
+    far_and_near='近',
+    version=__version__
+))
+WeaponConfig_list.append(WeaponConfig(
+    id=56,
+    weapon_name='青龙戟',
+    weapon_level=2,
+    min_atk=19,
+    max_atk=24,
+    fanji_miss=7,
+    weapon_type='大型',
+    group_id=19,
+    group_type='神器',
+    far_and_near='近',
+    version=__version__
+))
+WeaponConfig_list.append(WeaponConfig(
+    id=57,
+    weapon_name='青龙戟',
+    weapon_level=3,
+    min_atk=21,
+    max_atk=26,
+    fanji_miss=5,
+    weapon_type='大型',
+    group_id=19,
+    group_type='神器',
+    far_and_near='近',
+    version=__version__
+))
+WeaponConfig_list.append(WeaponConfig(
+    id=58,
+    weapon_name='青龙戟',
+    weapon_level=4,
+    min_atk=23,
+    max_atk=28,
+    fanji_miss=20,
+    weapon_type='大型',
+    group_id=19,
+    group_type='神器',
+    far_and_near='近',
+    version=__version__
+))
+WeaponConfig_list.append(WeaponConfig(
+    id=59,
+    weapon_name='真·青龙戟',
+    weapon_level=5,
+    min_atk=25,
+    max_atk=33,
+    fanji_miss=50,
+    weapon_type='大型',
+    group_id=19,
+    group_type='神器',
+    far_and_near='近',
+    version=__version__
+))
+WeaponConfig_list.append(WeaponConfig(
+    id=60,
+    weapon_name='幻影枪',
+    weapon_level=0,
+    min_atk=20,
+    max_atk=40,
+    can_fanji=False,
+    weapon_type='大型',
+    group_id=20,
+    group_type='神器',
+    far_and_near='近',
+    version=__version__
+))
+WeaponConfig_list.append(WeaponConfig(
+    id=61,
+    weapon_name='幻影枪',
+    weapon_level=1,
+    min_atk=22,
+    max_atk=42,
+    can_fanji=False,
+    weapon_type='大型',
+    group_id=20,
+    group_type='神器',
+    far_and_near='近',
+    version=__version__
+))
+WeaponConfig_list.append(WeaponConfig(
+    id=62,
+    weapon_name='幻影枪',
+    weapon_level=2,
+    min_atk=24,
+    max_atk=44,
+    can_fanji=False,
+    weapon_type='大型',
+    group_id=20,
+    group_type='神器',
+    far_and_near='近',
+    version=__version__
+))
+WeaponConfig_list.append(WeaponConfig(
+    id=63,
+    weapon_name='幻影枪',
+    weapon_level=3,
+    min_atk=26,
+    max_atk=46,
+    can_fanji=False,
+    weapon_type='大型',
+    group_id=20,
+    group_type='神器',
+    far_and_near='近',
+    version=__version__
+))
+WeaponConfig_list.append(WeaponConfig(
+    id=64,
+    weapon_name='幻影枪',
+    weapon_level=4,
+    min_atk=26,
+    max_atk=46,
+    can_fanji=False,
+    weapon_type='大型',
+    group_id=20,
+    group_type='神器',
+    far_and_near='近',
+    version=__version__
+))
+WeaponConfig_list.append(WeaponConfig(
+    id=65,
+    weapon_name='真·幻影枪',
+    weapon_level=5,
+    min_atk=26,
+    max_atk=46,
+    can_fanji=False,
+    weapon_type='大型',
+    bizhong=True,
+    is_turn_pass=True,
+    is_turn_pass_probability=100,
+    pass_turn=1,
+    miss_dhwl=True,
+    group_id=20,
+    group_type='神器',
+    far_and_near='近',
+    version=__version__
+))
+WeaponConfig_list.append(WeaponConfig(
+    id=66,
+    weapon_name='木槌',
+    weapon_level=0,
+    min_atk=14,
+    max_atk=18,
+    weapon_type='大型',
+    fanji_miss=15,
+    group_id=21,
+    group_type='神器',
+    far_and_near='近',
+    version=__version__
+))
+WeaponConfig_list.append(WeaponConfig(
+    id=67,
+    weapon_name='木槌',
+    weapon_level=1,
+    min_atk=16,
+    max_atk=20,
+    weapon_type='大型',
+    fanji_miss=15,
+    attribute_damage_type=True,
+    attribute_type='力量',
+    attribute_coefficient=5,
+    group_id=21,
+    group_type='神器',
+    far_and_near='近',
+    version=__version__
+))
+WeaponConfig_list.append(WeaponConfig(
+    id=68,
+    weapon_name='木槌',
+    weapon_level=2,
+    min_atk=18,
+    max_atk=22,
+    weapon_type='大型',
+    fanji_miss=15,
+    attribute_damage_type=True,
+    attribute_type='力量',
+    attribute_coefficient=10,
+    group_id=21,
+    group_type='神器',
+    far_and_near='近',
+    version=__version__
+))
+WeaponConfig_list.append(WeaponConfig(
+    id=69,
+    weapon_name='木槌',
+    weapon_level=3,
+    min_atk=20,
+    max_atk=24,
+    weapon_type='大型',
+    fanji_miss=15,
+    attribute_damage_type=True,
+    attribute_type='力量',
+    attribute_coefficient=15,
+    group_id=21,
+    group_type='神器',
+    far_and_near='近',
+    version=__version__
+))
+WeaponConfig_list.append(WeaponConfig(
+    id=70,
+    weapon_name='木槌',
+    weapon_level=4,
+    min_atk=22,
+    max_atk=26,
+    weapon_type='大型',
+    fanji_miss=15,
+    attribute_damage_type=True,
+    attribute_type='力量',
+    attribute_coefficient=25,
+    group_id=21,
+    group_type='神器',
+    far_and_near='近',
+    version=__version__
+))
+WeaponConfig_list.append(WeaponConfig(
+    id=71,
+    weapon_name='紫金八卦槌',
+    weapon_level=5,
+    min_atk=24,
+    max_atk=28,
+    weapon_type='大型',
+    fanji_miss=15,
+    attribute_damage_type=True,
+    attribute_type='力量',
+    attribute_coefficient=40,
+    group_id=21,
+    group_type='神器',
+    far_and_near='近',
+    version=__version__
+))
+WeaponConfig_list.append(WeaponConfig(
+    id=72,
+    weapon_name='充气锤子',
+    weapon_level=0,
+    min_atk=20,
+    max_atk=35,
+    weapon_type='大型',
+    is_turn_pass=True,
+    is_turn_pass_probability=10,
+    pass_turn=1,
+    group_id=22,
+    group_type='神器',
+    far_and_near='近',
+    version=__version__
+))
+WeaponConfig_list.append(WeaponConfig(
+    id=73,
+    weapon_name='充气锤子',
+    weapon_level=1,
+    min_atk=22,
+    max_atk=37,
+    weapon_type='大型',
+    is_turn_pass=True,
+    is_turn_pass_probability=10,
+    pass_turn=1,
+    group_id=22,
+    group_type='神器',
+    far_and_near='近',
+    version=__version__
+))
+WeaponConfig_list.append(WeaponConfig(
+    id=74,
+    weapon_name='充气锤子',
+    weapon_level=2,
+    min_atk=24,
+    max_atk=39,
+    weapon_type='大型',
+    is_turn_pass=True,
+    is_turn_pass_probability=10,
+    pass_turn=1,
+    group_id=22,
+    group_type='神器',
+    far_and_near='近',
+    version=__version__
+))
+WeaponConfig_list.append(WeaponConfig(
+    id=75,
+    weapon_name='充气锤子',
+    weapon_level=3,
+    min_atk=26,
+    max_atk=41,
+    weapon_type='大型',
+    is_turn_pass=True,
+    is_turn_pass_probability=15,
+    pass_turn=1,
+    group_id=22,
+    group_type='神器',
+    far_and_near='近',
+    version=__version__
+))
+WeaponConfig_list.append(WeaponConfig(
+    id=76,
+    weapon_name='充气锤子',
+    weapon_level=4,
+    min_atk=28,
+    max_atk=43,
+    weapon_type='大型',
+    is_turn_pass=True,
+    is_turn_pass_probability=20,
+    pass_turn=1,
+    group_id=22,
+    group_type='神器',
+    far_and_near='近',
+    version=__version__
+))
+WeaponConfig_list.append(WeaponConfig(
+    id=77,
+    weapon_name='真·充气锤子',
+    weapon_level=5,
+    min_atk=28,
+    max_atk=43,
+    weapon_type='大型',
+    is_turn_pass=True,
+    is_turn_pass_probability=30,
+    pass_turn=1,
+    miss_dhwl=True,
+    group_id=22,
+    group_type='神器',
+    far_and_near='近',
+    version=__version__
+))
+WeaponConfig_list.append(WeaponConfig(
+    id=78,
+    weapon_name='三叉戟',
+    weapon_level=0,
+    min_atk=25,
+    max_atk=50,
+    weapon_type='大型',
+    rest=True,
+    rest_probability=100,
+    group_id=23,
+    group_type='神器',
+    far_and_near='近',
+    version=__version__
+))
+WeaponConfig_list.append(WeaponConfig(
+    id=79,
+    weapon_name='三叉戟',
+    weapon_level=1,
+    min_atk=28,
+    max_atk=53,
+    weapon_type='大型',
+    rest=True,
+    rest_probability=90,
+    group_id=23,
+    group_type='神器',
+    far_and_near='近',
+    version=__version__
+))
+WeaponConfig_list.append(WeaponConfig(
+    id=80,
+    weapon_name='三叉戟',
+    weapon_level=2,
+    min_atk=31,
+    max_atk=56,
+    weapon_type='大型',
+    rest=True,
+    rest_probability=80,
+    group_id=23,
+    group_type='神器',
+    far_and_near='近',
+    version=__version__
+))
+WeaponConfig_list.append(WeaponConfig(
+    id=81,
+    weapon_name='三叉戟',
+    weapon_level=3,
+    min_atk=34,
+    max_atk=59,
+    weapon_type='大型',
+    rest=True,
+    rest_probability=60,
+    group_id=23,
+    group_type='神器',
+    far_and_near='近',
+    version=__version__
+))
+WeaponConfig_list.append(WeaponConfig(
+    id=82,
+    weapon_name='三叉戟',
+    weapon_level=4,
+    min_atk=37,
+    max_atk=62,
+    weapon_type='大型',
+    rest=True,
+    rest_probability=40,
+    group_id=23,
+    group_type='神器',
+    far_and_near='近',
+    version=__version__
+))
+WeaponConfig_list.append(WeaponConfig(
+    id=83,
+    weapon_name='真·三叉戟',
+    weapon_level=5,
+    min_atk=40,
+    max_atk=65,
+    weapon_type='大型',
+    group_id=23,
+    group_type='神器',
+    far_and_near='近',
+    version=__version__
+))
+WeaponConfig_list.append(WeaponConfig(
+    id=84,
+    weapon_name='小李飞刀',
+    weapon_level=0,
+    min_atk=5,
+    max_atk=10,
+    weapon_type='小型',
+    ignore_jiasi=True,
+    group_id=24,
+    group_type='神器',
+    far_and_near='远',
+    version=__version__
+))
+WeaponConfig_list.append(WeaponConfig(
+    id=85,
+    weapon_name='小李飞刀',
+    weapon_level=1,
+    min_atk=7,
+    max_atk=12,
+    weapon_type='小型',
+    ignore_jiasi=True,
+    group_id=24,
+    group_type='神器',
+    far_and_near='远',
+    version=__version__
+))
+WeaponConfig_list.append(WeaponConfig(
+    id=86,
+    weapon_name='小李飞刀',
+    weapon_level=2,
+    min_atk=9,
+    max_atk=14,
+    weapon_type='小型',
+    ignore_jiasi=True,
+    group_id=24,
+    group_type='神器',
+    far_and_near='远',
+    version=__version__
+))
+WeaponConfig_list.append(WeaponConfig(
+    id=87,
+    weapon_name='小李飞刀',
+    weapon_level=3,
+    min_atk=11,
+    max_atk=16,
+    weapon_type='小型',
+    ignore_jiasi=True,
+    group_id=24,
+    group_type='神器',
+    far_and_near='远',
+    version=__version__
+))
+WeaponConfig_list.append(WeaponConfig(
+    id=88,
+    weapon_name='小李飞刀',
+    weapon_level=4,
+    min_atk=13,
+    max_atk=18,
+    weapon_type='小型',
+    ignore_jiasi=True,
+    group_id=24,
+    group_type='神器',
+    far_and_near='远',
+    version=__version__
+))
+WeaponConfig_list.append(WeaponConfig(
+    id=89,
+    weapon_name='要你命三千',
+    weapon_level=5,
+    min_atk=23,
+    max_atk=28,
+    weapon_type='小型',
+    ignore_jiasi=True,
+    seckill=True,
+    seckill_probability=5,
+    group_id=24,
+    group_type='神器',
+    far_and_near='远',
+    version=__version__
+))
+WeaponConfig_list.append(WeaponConfig(
+    id=90,
+    weapon_name='流星锤',
+    weapon_level=0,
+    min_atk=15,
+    max_atk=24,
+    weapon_type='小型',
+    buff_type='闪避',
+    buff_turn=1,
+    buff_value=15,
+    buff_zj='buff',
+    buff_target='target',
+    group_id=25,
+    group_type='神器',
+    far_and_near='远',
+    version=__version__
+))
+WeaponConfig_list.append(WeaponConfig(
+    id=91,
+    weapon_name='流星锤',
+    weapon_level=1,
+    min_atk=16,
+    max_atk=25,
+    weapon_type='小型',
+    buff_type='闪避',
+    buff_turn=1,
+    buff_value=15,
+    buff_zj='buff',
+    buff_target='target',
+    group_id=25,
+    group_type='神器',
+    far_and_near='远',
+    version=__version__
+))
+WeaponConfig_list.append(WeaponConfig(
+    id=92,
+    weapon_name='流星锤',
+    weapon_level=2,
+    min_atk=17,
+    max_atk=26,
+    weapon_type='小型',
+    buff_type='闪避',
+    buff_turn=1,
+    buff_value=15,
+    buff_zj='buff',
+    buff_target='target',
+    group_id=25,
+    group_type='神器',
+    far_and_near='远',
+    version=__version__
+))
+WeaponConfig_list.append(WeaponConfig(
+    id=93,
+    weapon_name='流星锤',
+    weapon_level=3,
+    min_atk=18,
+    max_atk=27,
+    weapon_type='小型',
+    buff_type='闪避',
+    buff_turn=1,
+    buff_value=15,
+    buff_zj='buff',
+    buff_target='target',
+    group_id=25,
+    group_type='神器',
+    far_and_near='远',
+    version=__version__
+))
+WeaponConfig_list.append(WeaponConfig(
+    id=94,
+    weapon_name='流星锤',
+    weapon_level=4,
+    min_atk=18,
+    max_atk=27,
+    weapon_type='小型',
+    hitting_accuracy=10,
+    group_id=25,
+    group_type='神器',
+    far_and_near='远',
+    version=__version__
+))
+WeaponConfig_list.append(WeaponConfig(
+    id=95,
+    weapon_name='真·流星锤',
+    weapon_level=5,
+    min_atk=18,
+    max_atk=27,
+    weapon_type='小型',
+    hitting_accuracy=10,
+    double_hit=True,
+    double_hit_probability=100,
+    double_hit_count=3,
+    group_id=25,
+    group_type='神器',
+    far_and_near='远',
+    version=__version__
+))
+WeaponConfig_list.append(WeaponConfig(
+    id=96,
+    weapon_name='杯弓蛇影',
+    weapon_level=0,
+    min_atk=20,
+    max_atk=22,
+    weapon_type='中型',
+    buff_type='命中',
+    buff_turn=1,
+    buff_value=15,
+    buff_zj='buff',
+    buff_target='self',
+    group_id=26,
+    group_type='神器',
+    far_and_near='远',
+    version=__version__
+))
+WeaponConfig_list.append(WeaponConfig(
+    id=97,
+    weapon_name='杯弓蛇影',
+    weapon_level=1,
+    min_atk=22,
+    max_atk=24,
+    weapon_type='中型',
+    buff_type='命中',
+    buff_turn=1,
+    buff_value=20,
+    buff_zj='buff',
+    buff_target='self',
+    group_id=26,
+    group_type='神器',
+    far_and_near='远',
+    version=__version__
+))
+WeaponConfig_list.append(WeaponConfig(
+    id=98,
+    weapon_name='杯弓蛇影',
+    weapon_level=2,
+    min_atk=24,
+    max_atk=26,
+    weapon_type='中型',
+    buff_type='命中',
+    buff_turn=1,
+    buff_value=25,
+    buff_zj='buff',
+    buff_target='self',
+    group_id=26,
+    group_type='神器',
+    far_and_near='远',
+    version=__version__
+))
+WeaponConfig_list.append(WeaponConfig(
+    id=99,
+    weapon_name='杯弓蛇影',
+    weapon_level=3,
+    min_atk=27,
+    max_atk=29,
+    weapon_type='中型',
+    buff_type='命中',
+    buff_turn=2,
+    buff_value=30,
+    buff_zj='buff',
+    buff_target='self',
+    group_id=26,
+    group_type='神器',
+    far_and_near='远',
+    version=__version__
+))
+WeaponConfig_list.append(WeaponConfig(
+    id=100,
+    weapon_name='杯弓蛇影',
+    weapon_level=4,
+    min_atk=30,
+    max_atk=32,
+    weapon_type='中型',
+    buff_type='命中',
+    buff_turn=2,
+    buff_value=35,
+    buff_zj='buff',
+    buff_target='self',
+    group_id=26,
+    group_type='神器',
+    far_and_near='远',
+    version=__version__
+))
+WeaponConfig_list.append(WeaponConfig(
+    id=101,
+    weapon_name='落日弓',
+    weapon_level=5,
+    min_atk=34,
+    max_atk=36,
+    weapon_type='中型',
+    buff_type='命中',
+    buff_turn=3,
+    buff_value=40,
+    buff_zj='buff',
+    buff_target='self',
+    group_id=26,
+    group_type='神器',
+    far_and_near='远',
+    version=__version__
+))
+WeaponConfig_list.append(WeaponConfig(
+    id=102,
+    weapon_name='老鼠',
+    weapon_level=0,
+    min_atk=8,
+    max_atk=13,
+    weapon_type='小型',
+    buff_type='闪避',
+    buff_turn=2,
+    buff_value=10,
+    buff_zj='debuff',
+    buff_target='target',
+    group_id=27,
+    group_type='神器',
+    far_and_near='远',
+    version=__version__
+))
+WeaponConfig_list.append(WeaponConfig(
+    id=103,
+    weapon_name='老鼠',
+    weapon_level=1,
+    min_atk=10,
+    max_atk=15,
+    weapon_type='小型',
+    buff_type='闪避',
+    buff_turn=2,
+    buff_value=10,
+    buff_zj='debuff',
+    buff_target='target',
+    group_id=27,
+    group_type='神器',
+    far_and_near='远',
+    version=__version__
+))
+WeaponConfig_list.append(WeaponConfig(
+    id=104,
+    weapon_name='老鼠',
+    weapon_level=2,
+    min_atk=12,
+    max_atk=17,
+    weapon_type='小型',
+    buff_type='闪避',
+    buff_turn=2,
+    buff_value=10,
+    buff_zj='debuff',
+    buff_target='target',
+    group_id=27,
+    group_type='神器',
+    far_and_near='远',
+    version=__version__
+))
+WeaponConfig_list.append(WeaponConfig(
+    id=105,
+    weapon_name='老鼠',
+    weapon_level=3,
+    min_atk=14,
+    max_atk=19,
+    weapon_type='小型',
+    buff_type='闪避',
+    buff_turn=2,
+    buff_value=20,
+    buff_zj='debuff',
+    buff_target='target',
+    group_id=27,
+    group_type='神器',
+    far_and_near='远',
+    version=__version__
+))
+WeaponConfig_list.append(WeaponConfig(
+    id=106,
+    weapon_name='老鼠',
+    weapon_level=4,
+    min_atk=16,
+    max_atk=21,
+    weapon_type='小型',
+    buff_type='闪避',
+    buff_turn=2,
+    buff_value=20,
+    buff_zj='debuff',
+    buff_target='target',
+    group_id=27,
+    group_type='神器',
+    far_and_near='远',
+    version=__version__
+))
+WeaponConfig_list.append(WeaponConfig(
+    id=107,
+    weapon_name='钻天鼠',
+    weapon_level=5,
+    min_atk=18,
+    max_atk=23,
+    weapon_type='小型',
+    buff_type='闪避',
+    buff_turn=2,
+    buff_value=50,
+    buff_zj='debuff',
+    buff_target='target',
+    group_id=27,
+    group_type='神器',
+    far_and_near='远',
+    version=__version__
+))
+WeaponConfig_list.append(WeaponConfig(
+    id=108,
+    weapon_name='平底锅',
+    weapon_level=0,
+    min_atk=18,
+    max_atk=22,
+    weapon_type='小型',
+    fanji_miss=5,
+    group_id=28,
+    group_type='神器',
+    far_and_near='远',
+    version=__version__
+))
+WeaponConfig_list.append(WeaponConfig(
+    id=109,
+    weapon_name='平底锅',
+    weapon_level=1,
+    min_atk=20,
+    max_atk=24,
+    weapon_type='小型',
+    fanji_miss=10,
+    group_id=28,
+    group_type='神器',
+    far_and_near='远',
+    version=__version__
+))
+WeaponConfig_list.append(WeaponConfig(
+    id=110,
+    weapon_name='平底锅',
+    weapon_level=2,
+    min_atk=22,
+    max_atk=26,
+    weapon_type='小型',
+    fanji_miss=15,
+    group_id=28,
+    group_type='神器',
+    far_and_near='远',
+    version=__version__
+))
+WeaponConfig_list.append(WeaponConfig(
+    id=111,
+    weapon_name='平底锅',
+    weapon_level=3,
+    min_atk=24,
+    max_atk=28,
+    weapon_type='小型',
+    fanji_miss=20,
+    group_id=28,
+    group_type='神器',
+    far_and_near='远',
+    version=__version__
+))
+WeaponConfig_list.append(WeaponConfig(
+    id=112,
+    weapon_name='平底锅',
+    weapon_level=4,
+    min_atk=26,
+    max_atk=30,
+    weapon_type='小型',
+    fanji_miss=30,
+    group_id=28,
+    group_type='神器',
+    far_and_near='远',
+    version=__version__
+))
+WeaponConfig_list.append(WeaponConfig(
+    id=113,
+    weapon_name='刘罗锅',
+    weapon_level=5,
+    min_atk=28,
+    max_atk=32,
+    weapon_type='小型',
+    fanji_miss=50,
+    group_id=28,
+    group_type='神器',
+    far_and_near='远',
+    version=__version__
+))
+WeaponConfig_list.append(WeaponConfig(
+    id=114,
+    weapon_name='环扣刀',
+    weapon_level=0,
+    min_atk=12,
+    max_atk=12,
+    weapon_type='小型',
+    can_fanji=False,
+    group_id=29,
+    group_type='神器',
+    far_and_near='远',
+    version=__version__
+))
+WeaponConfig_list.append(WeaponConfig(
+    id=115,
+    weapon_name='环扣刀',
+    weapon_level=1,
+    min_atk=14,
+    max_atk=14,
+    weapon_type='小型',
+    can_fanji=False,
+    group_id=29,
+    group_type='神器',
+    far_and_near='远',
+    version=__version__
+))
+WeaponConfig_list.append(WeaponConfig(
+    id=116,
+    weapon_name='环扣刀',
+    weapon_level=2,
+    min_atk=16,
+    max_atk=16,
+    weapon_type='小型',
+    can_fanji=False,
+    group_id=29,
+    group_type='神器',
+    far_and_near='远',
+    version=__version__
+))
+WeaponConfig_list.append(WeaponConfig(
+    id=117,
+    weapon_name='环扣刀',
+    weapon_level=3,
+    min_atk=18,
+    max_atk=18,
+    weapon_type='小型',
+    can_fanji=False,
+    group_id=29,
+    group_type='神器',
+    far_and_near='远',
+    version=__version__
+))
+WeaponConfig_list.append(WeaponConfig(
+    id=118,
+    weapon_name='环扣刀',
+    weapon_level=4,
+    min_atk=21,
+    max_atk=21,
+    weapon_type='小型',
+    can_fanji=False,
+    group_id=29,
+    group_type='神器',
+    far_and_near='远',
+    version=__version__
+))
+WeaponConfig_list.append(WeaponConfig(
+    id=119,
+    weapon_name='金杯大砍刀',
+    weapon_level=5,
+    min_atk=25,
+    max_atk=25,
+    weapon_type='小型',
+    can_fanji=False,
+    group_id=29,
+    group_type='神器',
+    far_and_near='远',
+    version=__version__
+))
+WeaponConfig_list.append(WeaponConfig(
+    id=120,
+    weapon_name='烧饼',
+    weapon_level=0,
+    min_atk=4,
+    max_atk=7,
+    weapon_type='小型',
+    low_hp_zs=True,
+    low_hp=30,
+    low_hp_zs_value=10,
+    group_id=30,
+    group_type='神器',
+    far_and_near='远',
+    version=__version__
+))
+WeaponConfig_list.append(WeaponConfig(
+    id=121,
+    weapon_name='烧饼',
+    weapon_level=1,
+    min_atk=6,
+    max_atk=9,
+    weapon_type='小型',
+    low_hp_zs=True,
+    low_hp=30,
+    low_hp_zs_value=15,
+    group_id=30,
+    group_type='神器',
+    far_and_near='远',
+    version=__version__
+))
+WeaponConfig_list.append(WeaponConfig(
+    id=122,
+    weapon_name='烧饼',
+    weapon_level=2,
+    min_atk=8,
+    max_atk=11,
+    weapon_type='小型',
+    low_hp_zs=True,
+    low_hp=30,
+    low_hp_zs_value=20,
+    group_id=30,
+    group_type='神器',
+    far_and_near='远',
+    version=__version__
+))
+WeaponConfig_list.append(WeaponConfig(
+    id=123,
+    weapon_name='烧饼',
+    weapon_level=3,
+    min_atk=10,
+    max_atk=13,
+    weapon_type='小型',
+    low_hp_zs=True,
+    low_hp=30,
+    low_hp_zs_value=30,
+    group_id=30,
+    group_type='神器',
+    far_and_near='远',
+    version=__version__
+))
+WeaponConfig_list.append(WeaponConfig(
+    id=124,
+    weapon_name='烧饼',
+    weapon_level=4,
+    min_atk=12,
+    max_atk=15,
+    weapon_type='小型',
+    low_hp_zs=True,
+    low_hp=30,
+    low_hp_zs_value=40,
+    group_id=30,
+    group_type='神器',
+    far_and_near='远',
+    version=__version__
+))
+WeaponConfig_list.append(WeaponConfig(
+    id=125,
+    weapon_name='武大郎烧饼',
+    weapon_level=5,
+    min_atk=15,
+    max_atk=18,
+    weapon_type='小型',
+    low_hp_zs=True,
+    low_hp=30,
+    low_hp_zs_value=100,
+    group_id=30,
+    group_type='神器',
+    far_and_near='远',
+    version=__version__
+))
+# ----武器配置----end
+
+
+def add_config():
+    try:
+        result = WeaponConfig.query([WeaponConfig.version], filter=[WeaponConfig.version == __version__], group_by=[WeaponConfig.version], query_first=True)
+        if result:
+            if result.version != __version__:
+                WeaponConfig.delete()
+                WeaponConfig.batch_add(WeaponConfig_list)
+            else:
+                print('已插入配置，跳过')
+        else:
+            try:
+                WeaponConfig.batch_add(WeaponConfig_list)
+            except Exception:
+                print('插入配置错误')
+        result = ActiveSkillConfig.query([ActiveSkillConfig.version], filter=[ActiveSkillConfig.version == __version__], group_by=[ActiveSkillConfig.version], query_first=True)
+        if result:
+            if result.version != __version__:
+                ActiveSkillConfig.delete()
+                ActiveSkillConfig.batch_add(ActiveSkillConfig_list)
+            else:
+                print('已插入配置，跳过')
+        else:
+            try:
+                ActiveSkillConfig.batch_add(ActiveSkillConfig_list)
+            except Exception:
+                print('插入配置错误')
+        result = PassiveSkill.query([PassiveSkill.version], filter=[PassiveSkill.version == __version__], group_by=[PassiveSkill.version], query_first=True)
+        if result:
+            if result.version != __version__:
+                PassiveSkill.delete()
+                PassiveSkill.batch_add(Passive_Skill_list)
+            else:
+                print('已插入配置，跳过')
+        else:
+            try:
+                PassiveSkill.batch_add(Passive_Skill_list)
+            except Exception:
+                print('插入配置错误')
+        result = Userleveltitleconfig.query([Userleveltitleconfig.version], filter=[Userleveltitleconfig.version == __version__], group_by=[Userleveltitleconfig.version], query_first=True)
+        if result:
+            if result.version != __version__:
+                Userleveltitleconfig.delete()
+                Userleveltitleconfig.batch_add(User_level_title_config_list)
+            else:
+                print('已插入配置，跳过')
+        else:
+            try:
+                Userleveltitleconfig.batch_add(User_level_title_config_list)
+            except Exception:
+                print('插入配置错误')
+    except Exception:
+        print('已插入配置，跳过')
+
+
+def check_model(obj, data):
+    result = obj.query([obj.version], filter=[obj.version == __version__], group_by=[obj.version], query_first=True)
+    if result:
+        if result.version != __version__:
+            obj.delete()
+            obj.batch_add(data)
+        else:
+            print('已插入配置，跳过')
+    else:
+        try:
+            obj.batch_add(data)
+        except Exception:
+            print('插入配置错误')
