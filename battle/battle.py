@@ -1,6 +1,6 @@
 from .player import Player
-from round import Round
-from util import TIMEOUTMSG
+from .round import Round
+from .util import TIMEOUTMSG
 
 
 class Battle:

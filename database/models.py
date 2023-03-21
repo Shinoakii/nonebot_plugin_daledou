@@ -52,7 +52,7 @@ class ActiveSkillConfig(Base, BaseModel):
     skill_level = Column(Integer, comment="技能等级")
     skill_type = Column(String(10), comment="技能类型")
     group_id = Column(Integer, comment="技能的种类id")
-    base_damage = Column(String(10), default=0, comment="技能基础伤害")
+    base_damage = Column(Integer, default=0, comment="技能基础伤害")
     lv_damage_type = Column(BOOLEAN, default=False, comment="技能是否与人物等级挂钩")
     lv_coefficient = Column(Integer, default=0, comment="技能人物等级参数")
     attribute_damage_type = Column(

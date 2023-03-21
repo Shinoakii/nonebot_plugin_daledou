@@ -11,7 +11,8 @@ from .battle.weapon import Weapon
 from .battle.active_skill import ActiveSkill
 from .database.models import Users
 import random
-from .util import check_user
+from .util import check_user, send_forward_msg
+from .battle.battle import Battle
 
 
 async def num_check(num):
@@ -103,4 +104,20 @@ async def _(bot: Bot, event: MessageEvent,  args: Message = CommandArg()):
     for arg in args:
         if arg.type == "at":
             at_qq = arg.data.get("qq", "")
-    qc_qc.finish()
+    if at_qq:
+        result = DB.get_user_by_user_id(at_qq)
+        if result:
+            p1 = DB.get_user_by_user_id(event.user_id)
+            p2 = result
+            bt = Battle(p1, p2)
+            winner = bt.battle_pvp()
+            battle_msg = bt.battle_msg
+            await send_forward_msg(bot, event, 'PVP', bot.self_id, battle_msg)
+            msg = f'{winner.nick_name}赢了'
+            await qc_qc.finish(msg, at_sender=True)
+        else:
+            msg = '对手还未创建Q宠'
+            await qc_qc.finish(msg, at_sender=True)
+    else:
+        msg = '请at需要切磋的人'
+        await qc_qc.finish(msg, at_sender=True)

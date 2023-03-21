@@ -74,6 +74,7 @@ class Character:
         self.large_miss = 0
         self.active_skill_miss = 0
         self.is_jiasi = False  # 假死
+        self.base_fanji_miss = 0
         # -------基础吸血-------
         self.base_absorb = 0
         # 技能暴击
@@ -127,7 +128,7 @@ class Character:
                 self.active_skill_js += r.buff_value
 
     def get_final_att(self):
-        self.hp = int(self.base_hp + self.level_up_hp + (self.base_hp + self.qjsq) * 0.2)
+        self.hp = int(self.base_hp + self.level_up_hp + (self.base_hp + self.qjsq) * 0.2) * 20
         self.power = int(self.power + (self.power / 2 + 3) * self.tsdl + (self.power / 5 + 1) * self.jhfz)
         self.agility = int(self.agility + (self.agility / 2 + 3) * self.ssmj + (self.agility / 5 + 1) * self.jhfz)
         self.speed = int(self.speed + (self.speed / 2 + 3) * self.kryb + (self.speed / 5 + 1) * self.jhfz)

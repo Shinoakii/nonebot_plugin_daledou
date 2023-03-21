@@ -4,6 +4,7 @@ from .weapon import Weapon
 from .active_skill import ActiveSkill
 from .util import get_probability
 from .character import Character
+from ..database.db import DB
 
 
 class Player(Character):
@@ -12,8 +13,8 @@ class Player(Character):
         super().__init__(player)
         self.all_hp = self.hp  # 用于战斗计算
         self.now_weapon = Weapon(0)
-        self.active_skills = player['active_skills']
-        self.weapons = player['weapons']
+        self.active_skills = [1, 7, 13, 19, 25, 31, 37, 43, 49, 55, 61, 67, 73, 78]
+        self.weapons = [1, 7, 13, 19, 25, 31, 37, 43, 49, 55, 61, 67, 73, 78]
         self.now_active_skill = ActiveSkill(0)
         # -------dot-------
         self.dot_damage = 0
@@ -102,11 +103,11 @@ class Player(Character):
             skill_probability else 0
         if self.active_skills and attack_type == 1:
             use = random.choice(self.active_skills)
-            self.now_active_skill = ActiveSkill(use)
+            self.now_active_skill = ActiveSkill(DB.get_active_skill_by_id(use))
             self.active_skills.remove(use)
         elif self.weapons and attack_type == 2:
             use = random.choice(self.weapons)
-            self.now_weapon = Weapon(use)
+            self.now_weapon = Weapon(DB.get_weapon_by_id(use))
             self.weapons.remove(use)
         else:
             attack_type = 0

@@ -1,8 +1,43 @@
-import util
 from .weapon import Weapon
 from .active_skill import ActiveSkill
 import random
 from .player import TempAttribute
+from ..database.db import DB
+from .util import (
+    MISSMSG,
+    BEFOREATTACKMSG,
+    AFTERATTACKMSG,
+    WEAPONHITMSG,
+    HITMSG,
+    WEAPONBIZHONGMSG,
+    JIASIMSG,
+    DOTMSG,
+    IGNOREJIASI,
+    SKILLBIZHONGMSG,
+    SKILLMSG,
+    REMOVEHPMSG,
+    REMOVEHPMISSMSG,
+    DOTDAMAGEMSG,
+    SKILLTURNPASSMSG,
+    WEAPONTURNPASSMSG,
+    RECOVERHPMSG,
+    RESETDOTMSG,
+    NOTHROWWEAPONSMSG,
+    THROWWEAPONSMSG,
+    CANTFANJIMSG,
+    LIMITSKILLMISSMSG,
+    LIMITSKILLMSG,
+    LIMITACTIVEMSG,
+    TARGETTHROWWEAPONMSG,
+    BUFFMSG,
+    SPEEDEFFECTMSG,
+    FANJIMISSMSG,
+    ABSORBMSG,
+    DHWLMSG,
+    RESTMSG,
+    SECKILLMSG,
+    get_probability
+)
 
 
 class Round:
@@ -24,7 +59,7 @@ class Round:
             if self.p1.is_jiasi:
                 self.p1.hp = 1
                 self.p1.is_jiasi = False
-                self.battle_msg.append(util.JIASIMSG.format(self.p1.nick_name))
+                self.battle_msg.append(JIASIMSG.format(self.p1.nick_name))
             else:
                 self.battle_msg.append(f'{self.p2.nick_name}胜利了')
         if self.p2.is_alive():
@@ -35,7 +70,7 @@ class Round:
             if self.p2.is_jiasi:
                 self.p2.hp = 1
                 self.p2.is_jiasi = False
-                self.battle_msg.append(util.JIASIMSG.format(self.p2.nick_name))
+                self.battle_msg.append(JIASIMSG.format(self.p2.nick_name))
                 is_turn_pass, self.p2 = self.get_turn_pass(self.p2)
                 if not is_turn_pass:
                     self.p1, self.p2 = self.p2, self.p1
@@ -49,13 +84,13 @@ class Round:
         if self.p1.dot_turn:
             self.p1.hp -= self.p1.dot_damage
             self.p1.dot_turn -= 1
-            self.battle_msg.append(util.DOTMSG.format(
+            self.battle_msg.append(DOTMSG.format(
                 self.p1.nick_name, self.p1.dot_name, self.p1.dot_damage, self.p1.dot_turn))
 
         if self.p2.dot_turn:
             self.p2.hp -= self.p2.dot_damage
             self.p2.dot_turn -= 1
-            self.battle_msg.append(util.DOTMSG.format(
+            self.battle_msg.append(DOTMSG.format(
                 self.p2.nick_name, self.p2.dot_name, self.p2.dot_damage, self.p2.dot_turn))
         if not self.p1.is_alive():
             return
@@ -68,14 +103,14 @@ class Round:
             if self.p1.get_bizhong():
                 # 必中逻辑
                 if p1_attack_type == 1:
-                    self.battle_msg.append(util.SKILLBIZHONGMSG.format(
+                    self.battle_msg.append(SKILLBIZHONGMSG.format(
                         self.p2.nick_name,
                         self.p1.nick_name,
                         self.p1.nick_name,
                         self.p1.now_active_skill.skill_name))
 
                 elif p1_attack_type == 2:
-                    self.battle_msg.append(util.WEAPONBIZHONGMSG.format(
+                    self.battle_msg.append(WEAPONBIZHONGMSG.format(
                         self.p2.nick_name,
                         self.p1.nick_name,
                         self.p1.nick_name,
@@ -84,7 +119,7 @@ class Round:
                     self.p1, self.p2, atk_type=p1_attack_type)
             else:
                 # 没必中 miss了
-                self.battle_msg.append(util.MISSMSG.format(
+                self.battle_msg.append(MISSMSG.format(
                     self.p1.nick_name, self.p2.nick_name))
                 return
         else:
@@ -93,7 +128,7 @@ class Round:
                 if not self.get_can_fanji_msg():
                     pass
                 else:  # 可以反击
-                    self.battle_msg.append(util.BEFOREATTACKMSG.format(
+                    self.battle_msg.append(BEFOREATTACKMSG.format(
                         self.p1.nick_name, self.p2.nick_name))
                     self.p1, self.p2 = self.get_before_fanji_msg(
                         p1=self.p1, p2=self.p2)
@@ -109,11 +144,11 @@ class Round:
 
     def get_can_fanji_msg(self):
         if not self.p1.get_can_fanji():  # p1无法被反击
-            self.battle_msg.append(util.CANTFANJIMSG.format(
+            self.battle_msg.append(CANTFANJIMSG.format(
                 self.p2.nick_name, self.p1.nick_name))
             return False
         if not self.p1.get_fanji_miss():  # 反击miss
-            self.battle_msg.append(util.FANJIMISSMSG.format(
+            self.battle_msg.append(FANJIMISSMSG.format(
                 self.p2.nick_name, self.p1.nick_name))
             return False
         return True
@@ -127,7 +162,7 @@ class Round:
         if p2.is_alive():
             if p2.is_after_fanji():
                 self.battle_msg.append(
-                    util.AFTERATTACKMSG.format(p2.nick_name))
+                    AFTERATTACKMSG.format(p2.nick_name))
                 p2_attack_type = p2.get_attack_type()
                 p2, p1 = self.attack(self.p2, self.p1, atk_type=p2_attack_type)
         return p1, p2
@@ -145,7 +180,7 @@ class Round:
                     p1.limit_name = ''
                 pass
             else:
-                self.battle_msg.append(util.LIMITACTIVEMSG.format(
+                self.battle_msg.append(LIMITACTIVEMSG.format(
                     p1.nick_name,
                     p1.get_now_attack_far_and_near(),
                     p1.limit_name
@@ -157,9 +192,9 @@ class Round:
                 return p1, p2
         if atk_type == 0:
             atk = p1.power
-            damage = int(atk * ((100 - p2.Base_jianshang) / 100)
-                         * (p1.Base_zengshang / 100 + 1))
-            self.battle_msg.append(util.HITMSG.format(
+            damage = int(atk * ((100 - p2.base_jianshang) / 100)
+                         * (p1.base_zengshang / 100 + 1))
+            self.battle_msg.append(HITMSG.format(
                 p1.nick_name,
                 p2.nick_name,
                 damage
@@ -172,7 +207,7 @@ class Round:
         elif atk_type == 1:  # 技能
             if p1.now_active_skill.skill_type == '直接伤害':
                 damage = self.get_skill_final_damage(p1, p2)
-                self.battle_msg.append(util.SKILLMSG.format(
+                self.battle_msg.append(SKILLMSG.format(
                     p1.nick_name,
                     p1.now_active_skill.skill_name,
                     p2.nick_name,
@@ -188,7 +223,7 @@ class Round:
                 p2.dot_damage = damage
                 p2.dot_turn = p1.now_active_skill.dot_turn
                 p2.dot_name = p1.now_active_skill.skill_name
-                self.battle_msg.append(util.DOTDAMAGEMSG.format(
+                self.battle_msg.append(DOTDAMAGEMSG.format(
                     p1.nick_name,
                     p1.now_active_skill.skill_name,
                     p2.nick_name,
@@ -196,32 +231,32 @@ class Round:
                     p1.now_active_skill.dot_turn,
                 ))
             elif p1.now_active_skill.skill_type == '生命移除':
-                if util.get_probability(p1.now_active_skill.remove_hp_probability):  # 命中了
+                if get_probability(p1.now_active_skill.remove_hp_probability):  # 命中了
                     p2 = p1.now_active_skill.target_hp_remove(p2)
-                    self.battle_msg.append(util.REMOVEHPMSG.format(
+                    self.battle_msg.append(REMOVEHPMSG.format(
                         p2.nick_name,
                         p1.nick_name,
                         p1.now_active_skill.skill_name,
                         p2.hp
                     ))
                 else:
-                    self.battle_msg.append(util.REMOVEHPMISSMSG.format(
+                    self.battle_msg.append(REMOVEHPMISSMSG.format(
                         p1.nick_name,
                         p1.now_active_skill.skill_name,
                         p2.nick_name,
                     ))
             elif p1.now_active_skill.skill_type == '恢复类':
                 recover_hp, p1 = self.get_recover_hp(p1)
-                self.battle_msg.append(util.RECOVERHPMSG.format(
+                self.battle_msg.append(RECOVERHPMSG.format(
                     p1.nick_name,
                     p1.now_active_skill.skill_name,
                     recover_hp
                 ))
                 if p1.now_active_skill.is_atk:
                     atk = p1.power
-                    damage = int(atk * ((100 - p2.Base_jianshang) / 100)
+                    damage = int(atk * ((100 - p2.base_jianshang) / 100)
                                  * (p1.Base_zengshang / 100 + 1))
-                    self.battle_msg.append(util.HITMSG.format(
+                    self.battle_msg.append(HITMSG.format(
                         p1.nick_name,
                         p2.nick_name,
                         damage
@@ -234,28 +269,28 @@ class Round:
                 have_weapons = len(p1.weapons)
                 count = p1.now_active_skill.throw_weapons if have_weapons >= p1.now_active_skill.throw_weapons else have_weapons
                 if count == 0:
-                    self.battle_msg.append(util.NOTHROWWEAPONSMSG.format(
+                    self.battle_msg.append(NOTHROWWEAPONSMSG.format(
                         p1.nick_name,
                         p1.now_active_skill.skill_name
                     ))
                 else:
-                    self.battle_msg.append(util.THROWWEAPONSMSG.format(
+                    self.battle_msg.append(THROWWEAPONSMSG.format(
                         p1.nick_name,
                         p1.now_active_skill.skill_name
                     ))
                     while count:
                         use = random.choice(p1.weapons)
-                        p1.now_weapon = Weapon(use)
+                        p1.now_weapon = Weapon(DB.get_weapon_by_id(use))
                         p1.weapons.remove(use)
                         p1, p2 = self.weapon_action(p1, p2)
                         count -= 1
                     p1.now_weapon = Weapon(0)  # 重置
             elif p1.now_active_skill.skill_type == '限制':
-                if util.get_probability(p1.now_active_skill.limit_base_probability):
+                if get_probability(p1.now_active_skill.limit_base_probability):
                     p2.limit_type = p1.now_active_skill.limit_type
                     p2.limit_turn = p1.now_active_skill.limit_turn
                     p2.limit_name = p1.now_active_skill.skill_name
-                    self.battle_msg.append(util.LIMITSKILLMSG.format(
+                    self.battle_msg.append(LIMITSKILLMSG.format(
                         p1.nick_name,
                         p1.now_active_skill.skill_name,
                         p2.nick_name,
@@ -263,7 +298,7 @@ class Round:
                         p2.limit_type
                     ))
                 else:
-                    self.battle_msg.append(util.LIMITSKILLMISSMSG.format(
+                    self.battle_msg.append(LIMITSKILLMISSMSG.format(
                         p1.nick_name,
                         p1.now_active_skill.skill_name,
                         p2.nick_name,
@@ -273,20 +308,20 @@ class Round:
                 if p1.now_active_skill.ignore_jiasi and p2.is_jiasi:  # 假死碰上忽略假死
                     p2.is_jiasi = False
                     self.battle_msg.append(
-                        util.IGNOREJIASI.format(p2.nick_name, p1.nick_name))
+                        IGNOREJIASI.format(p2.nick_name, p1.nick_name))
                     return p1, p2
 
             if p1.now_active_skill.is_target_throw_weapons:
                 skill_throw_weapon_count = p1.now_active_skill.is_target_throw_weapons
                 p2_weapons_count = len(p2.weapons)
                 count = p2_weapons_count if skill_throw_weapon_count >= p2_weapons_count else skill_throw_weapon_count
-                THROWWEAPONMSG = util.TARGETTHROWWEAPONMSG.format(
+                THROWWEAPONMSG = TARGETTHROWWEAPONMSG.format(
                     p1.nick_name, p1.now_active_skill.skill_name, p2.nick_name)
                 if count > 0:
                     while count:
                         throw = random.choice(p2.weapons)
                         p2.weapons.remove(throw)
-                        weapon_info = Weapon(throw)
+                        weapon_info = Weapon(DB.get_weapon_by_id(throw))
                         THROWWEAPONMSG += f'{weapon_info.weapon_name}、'
                         count -= 1
                     THROWWEAPONMSG = THROWWEAPONMSG[:-1] + '被丢弃了！'
@@ -296,7 +331,7 @@ class Round:
                 count = str(count)
                 count = TempAttribute(p1.now_active_skill)
                 p1.temp_attribute.append(count)
-                self.battle_msg.append(util.BUFFMSG.format(
+                self.battle_msg.append(BUFFMSG.format(
                     p1.nick_name,
                     '技能',
                     p1.now_active_skill.skill_name,
@@ -307,8 +342,8 @@ class Round:
                 ))
 
             if p1.now_active_skill.is_turn_pass:  # 忽略回合
-                if util.get_probability(p1.now_active_skill.is_turn_pass_probability):
-                    self.battle_msg.append(util.SKILLTURNPASSMSG.format(
+                if get_probability(p1.now_active_skill.is_turn_pass_probability):
+                    self.battle_msg.append(SKILLTURNPASSMSG.format(
                         p1.nick_name,
                         p1.now_active_skill.skill_name,
                         p2.nick_name,
@@ -324,11 +359,11 @@ class Round:
                 if p1.now_weapon.ignore_jiasi and p2.is_jiasi:  # 假死碰上忽略假死
                     p2.is_jiasi = False
                     self.battle_msg.append(
-                        util.IGNOREJIASI.format(p2.nick_name, p1.nick_name))
+                        IGNOREJIASI.format(p2.nick_name, p1.nick_name))
                     return p1, p2
             if p1.now_weapon.is_turn_pass:  # 忽略回合
-                if util.get_probability(p1.now_weapon.is_turn_pass_probability):
-                    self.battle_msg.append(util.WEAPONTURNPASSMSG.format(
+                if get_probability(p1.now_weapon.is_turn_pass_probability):
+                    self.battle_msg.append(WEAPONTURNPASSMSG.format(
                         p1.nick_name,
                         p1.now_active_skill.skill_name,
                         p2.nick_name,
@@ -339,7 +374,7 @@ class Round:
                     p2.pass_turn = p1.now_weapon.pass_turn
             if p1.now_weapon.buff_type:
                 if p1.now_weapon.buff_target == 'self':
-                    self.battle_msg.append(util.BUFFMSG.format(
+                    self.battle_msg.append(BUFFMSG.format(
                         p1.nick_name,
                         '武器',
                         p1.now_weapon.weapon_name,
@@ -353,7 +388,7 @@ class Round:
                     count = TempAttribute(p1.now_weapon)
                     p1.temp_attribute.append(count)
                 elif p1.now_weapon.buff_target == 'target':
-                    self.battle_msg.append(util.BUFFMSG.format(
+                    self.battle_msg.append(BUFFMSG.format(
                         p1.nick_name,
                         '武器',
                         p1.now_weapon.weapon_name,
@@ -367,14 +402,14 @@ class Round:
                     count = TempAttribute(p1.now_weapon)
                     p2.temp_attribute.append(count)
             if p1.now_weapon.rest:
-                if util.get_probability(p1.now_weapon.rest_probability):
-                    self.battle_msg.append(util.RESTMSG.format(p1.nick_name))
+                if get_probability(p1.now_weapon.rest_probability):
+                    self.battle_msg.append(RESTMSG.format(p1.nick_name))
                     p1.is_turn_pass = True
                     p1.pass_turn = 1
             if p1.now_weapon.seckill:
-                if util.get_probability(p1.now_weapon.seckill_probability):
+                if get_probability(p1.now_weapon.seckill_probability):
                     self.battle_msg.append(
-                        util.SECKILLMSG.format(p1.nick_name, p2.nick_name))
+                        SECKILLMSG.format(p1.nick_name, p2.nick_name))
                     p2.hp = -1
                     if p2.is_jiasi:
                         p2.is_jiasi = False
@@ -395,7 +430,7 @@ class Round:
             damage = int(atk * ((100 - p2.large_weaponjs - p2.base_jianshang) / 100)
                          * ((p1.large_weaponzs / 100) + 1) * hit)
 
-        self.battle_msg.append(util.WEAPONHITMSG.format(
+        self.battle_msg.append(WEAPONHITMSG.format(
             p1.nick_name,
             p1.now_weapon.weapon_name,
             p2.nick_name,
@@ -404,7 +439,7 @@ class Round:
         if p1.get_absorb():
             absorb_hp = int(p1.get_absorb() * damage / 100)
             p1.hp += absorb_hp
-            self.battle_msg.append(util.ABSORBMSG.format(
+            self.battle_msg.append(ABSORBMSG.format(
                 p1.nick_name,
                 '武器',
                 p1.nick_name,
@@ -420,7 +455,7 @@ class Round:
         p2_active_skill_js = (100 - p2.active_skill_js) / 100  # 主动技能减伤
         opposite_sex_zengshang = 1
         crit = 1
-        if util.get_probability(p1.active_skill_crit):
+        if get_probability(p1.active_skill_crit):
             crit = 1.5
         if p1.now_active_skill.opposite_sex_zengshang:  # 异性增伤
             if not p1.is_opposite_sex(p2):
@@ -449,7 +484,7 @@ class Round:
                 p1.dot_damage = 0
                 p1.dot_turn = 0
                 p1.dot_name = ''
-                self.battle_msg(util.RESETDOTMSG.format(
+                self.battle_msg(RESETDOTMSG.format(
                     p1.now_active_skill.skill_name, p1.nick_name))
         return hp, p1
 
@@ -464,7 +499,7 @@ class Round:
     def get_speed_effect_turn_pass(self, p1, p2):
         turn_pass = p1.get_speed_effect(p2)
         if turn_pass:
-            self.battle_msg.append(util.SPEEDEFFECTMSG.format(
+            self.battle_msg.append(SPEEDEFFECTMSG.format(
                 p1.nick_name,
                 p2.nick_name,
                 p2.nick_name,
@@ -477,7 +512,7 @@ class Round:
         if p2.dhwl and (p1.now_weapon.miss_dhwl or p1.now_active_skill.miss_dhwl):
             hp = int(damage * p2.dhwl_value / 100)
             p1.hp -= hp
-            self.battle_msg.append(util.DHWLMSG.format(
+            self.battle_msg.append(DHWLMSG.format(
                 p1.nick_name,
                 p2.nick_name,
                 hp
