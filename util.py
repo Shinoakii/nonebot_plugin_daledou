@@ -43,7 +43,8 @@ async def send_forward_msg(
 async def send_forward_msg_list(
     bot: Bot,
     event: MessageEvent,
-    messages: list,  # 格式[*dict] 例[*{"type": "node", "data": {"name": name, "uin": uin, "content": msg}}]
+    # 格式[*dict] 例[*{"type": "node", "data": {"name": name, "uin": uin, "content": msg}}]
+    messages: list,
 ):
     """
     合并消息转发

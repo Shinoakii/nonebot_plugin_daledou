@@ -13,7 +13,8 @@ class Player(Character):
         super().__init__(player)
         self.all_hp = self.hp  # 用于战斗计算
         self.now_weapon = Weapon(0)
-        self.active_skills = [1, 7, 13, 19, 25, 31, 37, 43, 49, 55, 61, 67, 73, 78]
+        self.active_skills = [1, 7, 13, 19, 25,
+                              31, 37, 43, 49, 55, 61, 67, 73, 78]
         self.weapons = [1, 7, 13, 19, 25, 31, 37, 43, 49, 55, 61, 67, 73, 78]
         self.now_active_skill = ActiveSkill(0)
         # -------dot-------

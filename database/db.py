@@ -38,18 +38,18 @@ class DB:
         '''
         if skill_type:
             result = UserSkillInfo.query([UserSkillInfo.skill_id, UserSkillInfo.skill_level, ActiveSkillConfig.skill_type],
-                                           filter=[UserSkillInfo.user_id == user.user_id, ActiveSkillConfig.skill_type ==
-                                                   skill_type, ActiveSkillConfig.version == __version__],
-                                           join=[
-                                               ActiveSkillConfig, UserSkillInfo.skill_id == ActiveSkillConfig.id]
-                                           )
+                                         filter=[UserSkillInfo.user_id == user.user_id, ActiveSkillConfig.skill_type ==
+                                                 skill_type, ActiveSkillConfig.version == __version__],
+                                         join=[
+                ActiveSkillConfig, UserSkillInfo.skill_id == ActiveSkillConfig.id]
+            )
         else:
             result = UserSkillInfo.query([UserSkillInfo.skill_id, UserSkillInfo.skill_level, ActiveSkillConfig.skill_type],
-                                           filter=[
-                                               UserSkillInfo.user_id == user.user_id, ActiveSkillConfig.version == __version__],
-                                           join=[
-                                               ActiveSkillConfig, UserSkillInfo.skill_id == ActiveSkillConfig.id]
-                                           )
+                                         filter=[
+                UserSkillInfo.user_id == user.user_id, ActiveSkillConfig.version == __version__],
+                join=[
+                ActiveSkillConfig, UserSkillInfo.skill_id == ActiveSkillConfig.id]
+            )
         return result
 
     @classmethod
@@ -61,8 +61,10 @@ class DB:
     def get_user_ps_skills_info(cls, user):
         '''获取用户所有被动技能信息'''
         return UserSkillInfo.query([UserSkillInfo.skill_group_id, PassiveSkill.buff_type, PassiveSkill.buff_value],
-                                   filter=[UserSkillInfo.user_id == user.user_id, UserSkillInfo.skill_type == '被动'],
-                                   join=[PassiveSkill, UserSkillInfo.skill_id == PassiveSkill.id]
+                                   filter=[UserSkillInfo.user_id == user.user_id,
+                                           UserSkillInfo.skill_type == '被动'],
+                                   join=[
+                                       PassiveSkill, UserSkillInfo.skill_id == PassiveSkill.id]
                                    )
 
     @classmethod

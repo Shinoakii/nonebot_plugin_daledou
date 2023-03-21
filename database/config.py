@@ -3671,61 +3671,18 @@ WeaponConfig_list.append(WeaponConfig(
 
 
 def add_config():
-    try:
-        result = WeaponConfig.query([WeaponConfig.version], filter=[WeaponConfig.version == __version__], group_by=[WeaponConfig.version], query_first=True)
-        if result:
-            if result.version != __version__:
-                WeaponConfig.delete()
-                WeaponConfig.batch_add(WeaponConfig_list)
-            else:
-                print('已插入配置，跳过')
-        else:
-            try:
-                WeaponConfig.batch_add(WeaponConfig_list)
-            except Exception:
-                print('插入配置错误')
-        result = ActiveSkillConfig.query([ActiveSkillConfig.version], filter=[ActiveSkillConfig.version == __version__], group_by=[ActiveSkillConfig.version], query_first=True)
-        if result:
-            if result.version != __version__:
-                ActiveSkillConfig.delete()
-                ActiveSkillConfig.batch_add(ActiveSkillConfig_list)
-            else:
-                print('已插入配置，跳过')
-        else:
-            try:
-                ActiveSkillConfig.batch_add(ActiveSkillConfig_list)
-            except Exception:
-                print('插入配置错误')
-        result = PassiveSkill.query([PassiveSkill.version], filter=[PassiveSkill.version == __version__], group_by=[PassiveSkill.version], query_first=True)
-        if result:
-            if result.version != __version__:
-                PassiveSkill.delete()
-                PassiveSkill.batch_add(Passive_Skill_list)
-            else:
-                print('已插入配置，跳过')
-        else:
-            try:
-                PassiveSkill.batch_add(Passive_Skill_list)
-            except Exception:
-                print('插入配置错误')
-        result = Userleveltitleconfig.query([Userleveltitleconfig.version], filter=[Userleveltitleconfig.version == __version__], group_by=[Userleveltitleconfig.version], query_first=True)
-        if result:
-            if result.version != __version__:
-                Userleveltitleconfig.delete()
-                Userleveltitleconfig.batch_add(User_level_title_config_list)
-            else:
-                print('已插入配置，跳过')
-        else:
-            try:
-                Userleveltitleconfig.batch_add(User_level_title_config_list)
-            except Exception:
-                print('插入配置错误')
-    except Exception:
-        print('已插入配置，跳过')
+    add_list = []
+    add_list.append([WeaponConfig, WeaponConfig_list])
+    add_list.append([ActiveSkillConfig, ActiveSkillConfig_list])
+    add_list.append([PassiveSkill, ActiveSkillConfig_list])
+    add_list.append([Userleveltitleconfig, User_level_title_config_list])
+    for add in add_list:
+        check_model(add[0], add[1])
 
 
 def check_model(obj, data):
-    result = obj.query([obj.version], filter=[obj.version == __version__], group_by=[obj.version], query_first=True)
+    result = obj.query([obj.version], filter=[obj.version == __version__], group_by=[
+                       obj.version], query_first=True)
     if result:
         if result.version != __version__:
             obj.delete()
